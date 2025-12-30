@@ -557,8 +557,8 @@ function hslToHex(h, s, l) {
 
 function generateSoftPalette() {
   const hue = Math.floor(Math.random() * 360);
-  const color1 = hslToHex(hue, 58, 78);
-  const color2 = hslToHex((hue + 32) % 360, 55, 74);
+  const color1 = hslToHex(hue, 48, 84);
+  const color2 = hslToHex((hue + 42) % 360, 44, 82);
   return { soft1: color1, soft2: color2 };
 }
 
@@ -650,6 +650,7 @@ const gpus = [
   { id: "rtx-4070ti", label: "NVIDIA RTX 4070 Ti", score: 940 },
   { id: "rtx-4080", label: "NVIDIA RTX 4080", score: 1020 },
   { id: "rtx-4090", label: "NVIDIA RTX 4090", score: 1100 },
+  { id: "rtx-4090d", label: "NVIDIA RTX 4090D", score: 1080 },
   { id: "rtx-5070", label: "NVIDIA RTX 5070", score: 980 },
   { id: "rtx-5080", label: "NVIDIA RTX 5080", score: 1120 },
   { id: "rtx-5090", label: "NVIDIA RTX 5090", score: 1180 },
@@ -751,6 +752,16 @@ const games = [
     ramRec: 24,
   },
   {
+    id: "helldivers2",
+    name: "Helldivers 2",
+    cpuMin: 540,
+    cpuRec: 820,
+    gpuMin: 560,
+    gpuRec: 900,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
     id: "bops6",
     name: "Call of Duty: Black Ops 6",
     cpuMin: 560,
@@ -769,6 +780,126 @@ const games = [
     gpuRec: 940,
     ramMin: 16,
     ramRec: 24,
+  },
+  {
+    id: "the-finals",
+    name: "The Finals",
+    cpuMin: 420,
+    cpuRec: 680,
+    gpuMin: 520,
+    gpuRec: 820,
+    ramMin: 12,
+    ramRec: 16,
+  },
+  {
+    id: "palworld",
+    name: "Palworld",
+    cpuMin: 360,
+    cpuRec: 620,
+    gpuMin: 360,
+    gpuRec: 700,
+    ramMin: 12,
+    ramRec: 16,
+  },
+  {
+    id: "overwatch2",
+    name: "Overwatch 2",
+    cpuMin: 320,
+    cpuRec: 520,
+    gpuMin: 320,
+    gpuRec: 540,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "lol",
+    name: "League of Legends",
+    cpuMin: 140,
+    cpuRec: 260,
+    gpuMin: 140,
+    gpuRec: 240,
+    ramMin: 4,
+    ramRec: 8,
+  },
+  {
+    id: "ow-r6",
+    name: "Rainbow Six Siege",
+    cpuMin: 280,
+    cpuRec: 460,
+    gpuMin: 260,
+    gpuRec: 480,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "hogwarts",
+    name: "Hogwarts Legacy",
+    cpuMin: 520,
+    cpuRec: 820,
+    gpuMin: 520,
+    gpuRec: 880,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "bg3",
+    name: "Baldur's Gate 3",
+    cpuMin: 420,
+    cpuRec: 640,
+    gpuMin: 420,
+    gpuRec: 700,
+    ramMin: 12,
+    ramRec: 16,
+  },
+  {
+    id: "forza5",
+    name: "Forza Horizon 5",
+    cpuMin: 420,
+    cpuRec: 700,
+    gpuMin: 420,
+    gpuRec: 760,
+    ramMin: 12,
+    ramRec: 16,
+  },
+  {
+    id: "rdr2",
+    name: "Red Dead Redemption 2",
+    cpuMin: 520,
+    cpuRec: 820,
+    gpuMin: 520,
+    gpuRec: 880,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "bf2042",
+    name: "Battlefield 2042",
+    cpuMin: 520,
+    cpuRec: 820,
+    gpuMin: 520,
+    gpuRec: 860,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "minecraft",
+    name: "Minecraft (RTX)",
+    cpuMin: 200,
+    cpuRec: 380,
+    gpuMin: 220,
+    gpuRec: 600,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "pubg",
+    name: "PUBG: Battlegrounds",
+    cpuMin: 360,
+    cpuRec: 620,
+    gpuMin: 360,
+    gpuRec: 640,
+    ramMin: 8,
+    ramRec: 16,
   },
   {
     id: "elden-ring",
@@ -801,8 +932,21 @@ const gameThemes = {
   apex: { primary: "#d62839", secondary: "#0b1320" },
   cs2: { primary: "#f5a623", secondary: "#0c1624" },
   warzone: { primary: "#00c2ff", secondary: "#0b1723" },
+  helldivers2: { primary: "#ffd580", secondary: "#0f1b29" },
   bops6: { primary: "#ff7a00", secondary: "#0f0f10" },
   bops7: { primary: "#9e1b32", secondary: "#0b0c10" },
+  "the-finals": { primary: "#ff5c8d", secondary: "#0d1325" },
+  palworld: { primary: "#8fd3ff", secondary: "#0d1822" },
+  overwatch2: { primary: "#f99e1a", secondary: "#0f1624" },
+  lol: { primary: "#0bc6a0", secondary: "#0b1420" },
+  "ow-r6": { primary: "#00c3ff", secondary: "#0c1a25" },
+  hogwarts: { primary: "#d8b586", secondary: "#0f121c" },
+  bg3: { primary: "#f5c87c", secondary: "#0f1722" },
+  forza5: { primary: "#ff4f7b", secondary: "#0d1524" },
+  rdr2: { primary: "#c93c3c", secondary: "#0f0f14" },
+  bf2042: { primary: "#35f0d0", secondary: "#0a1a19" },
+  minecraft: { primary: "#7ac943", secondary: "#0d1612" },
+  pubg: { primary: "#f5b126", secondary: "#0f141d" },
   "elden-ring": { primary: "#9fb25b", secondary: "#0a0f0c" },
   starfield: { primary: "#78a0ff", secondary: "#0d1020" },
 };
@@ -930,6 +1074,8 @@ function applyBackgroundMood(theme) {
   if (!softPalette) return;
   const paletteTheme = theme || gameThemes.default;
   const root = document.documentElement;
+  const softBase = `color-mix(in srgb, ${softPalette.soft1} 35%, #0f1526)`;
+  root.style.setProperty("--bg", softBase);
   root.style.setProperty(
     "--bg-soft-1",
     `color-mix(in srgb, ${paletteTheme.primary} 22%, ${softPalette.soft1})`
@@ -1017,8 +1163,8 @@ function computePerformance(input, language = "en") {
   }
 
   const baseFps = 90;
-  const fpsEstimate = Math.max(15, Math.round(baseFps * performanceScore));
-  const spread = Math.max(8, Math.round(fpsEstimate * 0.14));
+  const fpsEstimate = Math.max(20, Math.round(baseFps * performanceScore + 70));
+  const spread = Math.max(10, Math.round(fpsEstimate * 0.14));
   const fpsRange = `${Math.max(12, fpsEstimate - spread)}–${fpsEstimate + spread} FPS`;
 
   let settingsProfile = "medium";
@@ -1071,8 +1217,8 @@ function computeBottleneck(input, language = "en") {
   if (gpuEffective < cpuEffective * 0.9) limiter = "gpu";
 
   const rawPercent = (difference / higher) * 100;
-  const midPercent = Math.max(4, Math.min(55, rawPercent + 3));
-  const percentRange = `${Math.round(Math.max(3, midPercent - 4))}–${Math.round(midPercent + 4)}%`;
+  const midPercent = Math.max(3, Math.min(50, rawPercent - 7));
+  const percentRange = `${Math.round(Math.max(2, midPercent - 4))}–${Math.round(midPercent + 4)}%`;
 
   let summary = "Balanced build";
   let detail = dict.bottleneckHint || "CPU/GPU balance shown for your resolution.";

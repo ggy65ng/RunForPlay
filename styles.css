@@ -1,13 +1,13 @@
 :root {
-  --bg: #070a12;
+  --bg: #0f1526;
   --card: rgba(255, 255, 255, 0.04);
   --border: rgba(255, 255, 255, 0.07);
   --text: #e3ecf4;
   --muted: #9fb0c3;
   --accent: #50e3c2;
   --accent-2: #a855f7;
-  --bg-soft-1: #12223d;
-  --bg-soft-2: #172435;
+  --bg-soft-1: #1a2740;
+  --bg-soft-2: #1d2c45;
   --theme-1: #50e3c2;
   --theme-2: #a855f7;
   --shadow: 0 15px 60px rgba(0, 0, 0, 0.35);
@@ -32,16 +32,24 @@ body {
 .dynamic-bg {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 18%, color-mix(in srgb, var(--bg-soft-1), transparent 45%), transparent 35%),
-    radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--bg-soft-2), transparent 40%), transparent 34%),
-    radial-gradient(circle at 50% 88%, rgba(255, 255, 255, 0.08), transparent 42%),
-    linear-gradient(140deg, color-mix(in srgb, var(--bg-soft-1), #05070d 45%), color-mix(in srgb, var(--bg-soft-2), #05070d 45%));
-  opacity: 0.92;
-  transition: background 0.8s ease;
+  background: radial-gradient(
+      circle at 18% 18%,
+      color-mix(in srgb, var(--bg-soft-1), #e8f0ff 32%),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 82% 14%,
+      color-mix(in srgb, var(--bg-soft-2), #f6e8ff 28%),
+      transparent 36%
+    ),
+    radial-gradient(circle at 50% 92%, rgba(255, 255, 255, 0.12), transparent 46%),
+    linear-gradient(145deg, color-mix(in srgb, var(--bg-soft-1), #0f1526 35%), color-mix(in srgb, var(--bg-soft-2), #10182b 35%));
+  opacity: 0.94;
+  transition: background 0.8s ease, opacity 0.5s ease;
   z-index: 0;
   pointer-events: none;
-  background-size: 120% 120%;
-  animation: drift 28s ease-in-out infinite alternate;
+  background-size: 140% 140%;
+  animation: drift 32s ease-in-out infinite alternate;
 }
 
 @keyframes drift {
@@ -56,20 +64,20 @@ body {
 .glow {
   position: fixed;
   filter: blur(120px);
-  opacity: 0.6;
+  opacity: 0.42;
   z-index: 0;
 }
 .glow-cyan {
   width: 380px;
   height: 380px;
-  background: rgba(80, 227, 194, 0.18);
+  background: rgba(120, 226, 210, 0.22);
   top: 5vh;
   left: 5vw;
 }
 .glow-purple {
   width: 520px;
   height: 520px;
-  background: rgba(168, 85, 247, 0.14);
+  background: rgba(193, 140, 255, 0.19);
   top: 15vh;
   right: 5vw;
 }
@@ -163,14 +171,14 @@ main {
 }
 
 main > section {
-  margin: 5.5rem 0;
+  margin: 6.5rem 0;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 1.55fr 1fr;
-  gap: 3rem;
-  padding: 3.5rem 0 1.5rem;
+  gap: 3.4rem;
+  padding: 3.8rem 0 2rem;
   align-items: center;
 }
 
