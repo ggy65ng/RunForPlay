@@ -34,17 +34,17 @@ body {
   inset: 0;
   background: radial-gradient(
       circle at 18% 18%,
-      color-mix(in srgb, var(--bg-soft-1), #e8f0ff 32%),
-      transparent 38%
+      color-mix(in srgb, var(--bg-soft-1) 70%, #0a1224 30%),
+      transparent 46%
     ),
     radial-gradient(
       circle at 82% 14%,
-      color-mix(in srgb, var(--bg-soft-2), #f6e8ff 28%),
-      transparent 36%
+      color-mix(in srgb, var(--bg-soft-2) 68%, #101a32 32%),
+      transparent 44%
     ),
-    radial-gradient(circle at 50% 92%, rgba(255, 255, 255, 0.12), transparent 46%),
-    linear-gradient(145deg, color-mix(in srgb, var(--bg-soft-1), #0f1526 35%), color-mix(in srgb, var(--bg-soft-2), #10182b 35%));
-  opacity: 0.94;
+    radial-gradient(circle at 50% 92%, rgba(255, 255, 255, 0.06), transparent 50%),
+    linear-gradient(145deg, color-mix(in srgb, var(--bg-soft-1) 80%, #090f1f 20%), color-mix(in srgb, var(--bg-soft-2) 78%, #0b1222 22%));
+  opacity: 0.97;
   transition: background 0.8s ease, opacity 0.5s ease;
   z-index: 0;
   pointer-events: none;

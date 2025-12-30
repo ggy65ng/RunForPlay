@@ -557,8 +557,8 @@ function hslToHex(h, s, l) {
 
 function generateSoftPalette() {
   const hue = Math.floor(Math.random() * 360);
-  const color1 = hslToHex(hue, 48, 84);
-  const color2 = hslToHex((hue + 42) % 360, 44, 82);
+  const color1 = hslToHex(hue, 52, 42);
+  const color2 = hslToHex((hue + 38) % 360, 48, 38);
   return { soft1: color1, soft2: color2 };
 }
 
@@ -1074,15 +1074,18 @@ function applyBackgroundMood(theme) {
   if (!softPalette) return;
   const paletteTheme = theme || gameThemes.default;
   const root = document.documentElement;
-  const softBase = `color-mix(in srgb, ${softPalette.soft1} 35%, #0f1526)`;
+  const darkBase = "#080d18";
+  const softBase = `color-mix(in srgb, ${darkBase} 82%, ${softPalette.soft1})`;
+  const blend1 = `color-mix(in srgb, ${paletteTheme.primary} 48%, ${softPalette.soft1})`;
+  const blend2 = `color-mix(in srgb, ${paletteTheme.secondary} 46%, ${softPalette.soft2})`;
   root.style.setProperty("--bg", softBase);
   root.style.setProperty(
     "--bg-soft-1",
-    `color-mix(in srgb, ${paletteTheme.primary} 22%, ${softPalette.soft1})`
+    `color-mix(in srgb, ${darkBase} 78%, ${blend1} 22%)`
   );
   root.style.setProperty(
     "--bg-soft-2",
-    `color-mix(in srgb, ${paletteTheme.secondary} 20%, ${softPalette.soft2})`
+    `color-mix(in srgb, ${darkBase} 80%, ${blend2} 20%)`
   );
 }
 
