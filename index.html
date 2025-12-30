@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RunForPlay | AI Performance Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dynamic-bg" aria-hidden="true"></div>
+    <div class="glow glow-cyan"></div>
+    <div class="glow glow-purple"></div>
+    <header class="topbar">
+      <div class="logo">RunForPlay</div>
+      <nav class="nav">
+        <a href="#hero" data-i18n="navHome">Home</a>
+        <a href="#how" data-i18n="navHow">How It Works</a>
+        <a href="#supported" data-i18n="navGames">Supported Games</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="actions">
+        <label for="language" class="sr-only" data-i18n="languageLabel"
+          >Language</label
+        >
+        <select id="language" class="language"></select>
+        <a class="discord" href="https://discord.gg/byh" target="_blank" rel="noopener"
+          >Join our server</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-text glass">
+          <p class="eyebrow" data-i18n="eyebrow">AI gamer assistant</p>
+          <h1 data-i18n="heroTitle">Can Your PC Run This Game?</h1>
+          <p class="subtitle" data-i18n="heroSubtitle">
+            AI-powered performance check for PC gamers.
+          </p>
+          <div class="hero-actions">
+            <a class="primary" href="#checker" data-i18n="startBtn">
+              Start Performance Check
+            </a>
+            <button class="secondary" id="demoFill" type="button" data-i18n="demoBtn">
+              Try sample specs
+            </button>
+          </div>
+        </div>
+        <div class="hero-card glass">
+          <p class="card-title" data-i18n="quickStat">Quick insight</p>
+          <p class="stat">60–120 FPS</p>
+          <p class="caption" data-i18n="quickCaption">
+            Typical range for mid-tier GPUs at 1080p.
+          </p>
+          <div class="chip" data-i18n="instant">
+            Instant guidance → better performance
+          </div>
+        </div>
+      </section>
+
+      <section id="checker" class="checker glass">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="formEyebrow">Performance check</p>
+          <h2 data-i18n="formTitle">Enter your specs</h2>
+          <p class="subtitle" data-i18n="formSubtitle">
+            Choose your game and hardware to get personalized recommendations.
+          </p>
+        </div>
+        <form id="specForm" class="form-grid">
+          <div class="field">
+            <label for="game" data-i18n="gameLabel">Game Title</label>
+            <input
+              list="gameOptions"
+              id="game"
+              name="game"
+              placeholder="Fortnite, Valorant..."
+              required
+            />
+            <datalist id="gameOptions"></datalist>
+          </div>
+          <div class="field">
+            <label for="cpu" data-i18n="cpuLabel">CPU</label>
+            <select id="cpu" name="cpu" required></select>
+          </div>
+          <div class="field">
+            <label for="gpu" data-i18n="gpuLabel">GPU</label>
+            <select id="gpu" name="gpu" required></select>
+          </div>
+          <div class="field">
+            <label for="ram" data-i18n="ramLabel">RAM</label>
+            <select id="ram" name="ram">
+              <option value="4">4 GB</option>
+              <option value="8">8 GB</option>
+              <option value="12">12 GB</option>
+              <option value="16" selected>16 GB</option>
+              <option value="24">24 GB</option>
+              <option value="32">32 GB</option>
+              <option value="64">64 GB+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="resolution" data-i18n="resLabel">Resolution</label>
+            <select id="resolution" name="resolution">
+              <option value="720">1280×720 (HD)</option>
+              <option value="1080" selected>1920×1080 (Full HD)</option>
+              <option value="1440">2560×1440 (2K)</option>
+              <option value="2160">3840×2160 (4K)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="storage" data-i18n="storageLabel">Storage</label>
+            <select id="storage" name="storage">
+              <option value="nvme">NVMe SSD</option>
+              <option value="ssd" selected>SSD</option>
+              <option value="hdd">HDD</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="target" data-i18n="targetLabel">Target</label>
+            <select id="target" name="target">
+              <option value="balanced" selected data-i18n="targetBalanced">Balanced visuals</option>
+              <option value="fps" data-i18n="targetFPS">I want 60+ FPS</option>
+              <option value="quality" data-i18n="targetQuality">I want High graphics</option>
+            </select>
+          </div>
+          <div class="field full">
+            <button type="submit" class="primary" data-i18n="submitBtn">
+              Check Performance
+            </button>
+          </div>
+        </form>
+
+        <div id="results" class="results hidden">
+          <div class="result-top">
+            <div>
+              <p class="eyebrow" data-i18n="resultTitle">Your result</p>
+              <h3 id="verdict"></h3>
+              <p id="verdictDetail" class="subtitle"></p>
+            </div>
+            <div class="fps-box">
+              <p class="eyebrow" data-i18n="fpsTitle">Estimated FPS</p>
+              <p id="fpsRange" class="stat">--</p>
+              <p id="fpsDetail" class="caption"></p>
+            </div>
+          </div>
+          <div class="result-grid">
+            <div>
+              <h4 data-i18n="settingsTitle">Recommended settings</h4>
+              <ul id="settingsList" class="bullets"></ul>
+            </div>
+            <div>
+              <h4 data-i18n="upgradeTitle">Upgrade suggestions</h4>
+              <ul id="upgradeList" class="bullets"></ul>
+            </div>
+          </div>
+          <p class="disclaimer" id="disclaimer"></p>
+        </div>
+      </section>
+
+      <section id="how" class="how glass">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="howEyebrow">How it works</p>
+          <h2 data-i18n="howTitle">Input → Analyze → Result</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">1</div>
+            <h3 data-i18n="howStep1Title">Tell us your setup</h3>
+            <p data-i18n="howStep1Text">
+              Select your CPU, GPU, RAM, resolution, and target.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <h3 data-i18n="howStep2Title">We score it</h3>
+            <p data-i18n="howStep2Text">
+              We compare your hardware against curated game requirements.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <h3 data-i18n="howStep3Title">Get guidance</h3>
+            <p data-i18n="howStep3Text">
+              Receive FPS ranges, settings, and upgrade tips instantly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="supported" class="supported glass">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="supportEyebrow">Popular titles</p>
+          <h2 data-i18n="supportTitle">Optimized for top games</h2>
+        </div>
+        <div class="chips" id="gameTags"></div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="footer-links">
+        <a href="#hero" data-i18n="footerAbout">About</a>
+        <a href="#checker" data-i18n="footerPrivacy">Privacy</a>
+        <a href="#checker" data-i18n="footerTerms">Terms</a>
+      </div>
+      <p class="footer-note" data-i18n="footerNote">
+        © 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

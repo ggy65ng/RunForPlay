@@ -1,0 +1,842 @@
+const languages = {
+  en: "English",
+  ar: "العربية",
+  hi: "हिन्दी",
+  ko: "한국어",
+  ja: "日本語",
+  es: "Español",
+  fr: "Français",
+  de: "Deutsch",
+};
+
+const translations = {
+  en: {
+    navHome: "Home",
+    navHow: "How It Works",
+    navGames: "Supported Games",
+    navContact: "Contact",
+    languageLabel: "Language",
+    eyebrow: "AI gamer assistant",
+    heroTitle: "Can Your PC Run This Game?",
+    heroSubtitle: "AI-powered performance check for PC gamers.",
+    startBtn: "Start Performance Check",
+    demoBtn: "Try sample specs",
+    quickStat: "Quick insight",
+    quickCaption: "Typical range for mid-tier GPUs at 1080p.",
+    instant: "Instant guidance → better performance",
+    formEyebrow: "Performance check",
+    formTitle: "Enter your specs",
+    formSubtitle: "Choose your game and hardware to get personalized recommendations.",
+    gameLabel: "Game Title",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "RAM",
+    resLabel: "Resolution",
+    storageLabel: "Storage",
+    targetLabel: "Target",
+    targetBalanced: "Balanced visuals",
+    targetFPS: "I want 60+ FPS",
+    targetQuality: "I want High graphics",
+    submitBtn: "Check Performance",
+    resultTitle: "Your result",
+    fpsTitle: "Estimated FPS",
+    settingsTitle: "Recommended settings",
+    upgradeTitle: "Upgrade suggestions",
+    howEyebrow: "How it works",
+    howTitle: "Input → Analyze → Result",
+    howStep1Title: "Tell us your setup",
+    howStep1Text: "Select your CPU, GPU, RAM, resolution, and target.",
+    howStep2Title: "We score it",
+    howStep2Text: "We compare your hardware against curated game requirements.",
+    howStep3Title: "Get guidance",
+    howStep3Text: "Receive FPS ranges, settings, and upgrade tips instantly.",
+    supportEyebrow: "Popular titles",
+    supportTitle: "Optimized for top games",
+    footerAbout: "About",
+    footerPrivacy: "Privacy",
+    footerTerms: "Terms",
+    footerNote: "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦",
+    verdictPlayable: "✅ Playable",
+    verdictBorderline: "⚠️ Barely Playable",
+    verdictNo: "❌ Not Recommended",
+    detailGood: "Great match for smooth gameplay.",
+    detailOkay: "Use low to medium settings for stable play.",
+    detailLow: "Consider lowering resolution or upgrading GPU/CPU.",
+    disclaimer: "Note: These results are AI-based estimates. Real performance may vary depending on drivers, game patches, cooling, and background apps.",
+  },
+  ar: {
+    navHome: "الرئيسية",
+    navHow: "كيف يعمل",
+    navGames: "الألعاب المدعومة",
+    navContact: "تواصل",
+    languageLabel: "اللغة",
+    eyebrow: "مساعد الألعاب بالذكاء الاصطناعي",
+    heroTitle: "هل يمكن لجهازك تشغيل هذه اللعبة؟",
+    heroSubtitle: "فحص أداء مدعوم بالذكاء الاصطناعي للاعبين على الحاسب.",
+    startBtn: "ابدأ الفحص",
+    demoBtn: "تجربة المواصفات",
+    quickStat: "نظرة سريعة",
+    quickCaption: "نطاق معتاد لبطاقات الرسوميات المتوسطة على 1080p.",
+    instant: "إرشاد فوري → أداء أفضل",
+    formEyebrow: "فحص الأداء",
+    formTitle: "أدخل مواصفاتك",
+    formSubtitle: "اختر لعبتك ومواصفات جهازك للحصول على توصيات مخصصة.",
+    gameLabel: "عنوان اللعبة",
+    cpuLabel: "المعالج",
+    gpuLabel: "بطاقة الرسوميات",
+    ramLabel: "الذاكرة",
+    resLabel: "الدقة",
+    storageLabel: "التخزين",
+    targetLabel: "الهدف",
+    targetBalanced: "جودة متوازنة",
+    targetFPS: "أريد 60 إطارًا+",
+    targetQuality: "أريد جودة عالية",
+    submitBtn: "تحقق من الأداء",
+    resultTitle: "النتيجة",
+    fpsTitle: "معدل الإطارات المتوقع",
+    settingsTitle: "الإعدادات المقترحة",
+    upgradeTitle: "اقتراحات الترقية",
+    howEyebrow: "كيف يعمل",
+    howTitle: "إدخال → تحليل → نتيجة",
+    howStep1Title: "أخبرنا بمواصفاتك",
+    howStep1Text: "اختر المعالج والبطاقة والذاكرة والدقة والهدف.",
+    howStep2Title: "نقيم الأداء",
+    howStep2Text: "نقارن العتاد بمتطلبات الألعاب المنسقة.",
+    howStep3Title: "نقدم الإرشاد",
+    howStep3Text: "نعرض نطاق الإطارات والإعدادات ونصائح الترقية فورًا.",
+    supportEyebrow: "ألعاب شهيرة",
+    supportTitle: "محسّن لأهم الألعاب",
+    footerAbout: "حول",
+    footerPrivacy: "الخصوصية",
+    footerTerms: "الشروط",
+    footerNote: "© 2025 RunForPlay. جميع الحقوق محفوظة. صُنع في السعودية 🇸🇦",
+    verdictPlayable: "✅ قابل للعب",
+    verdictBorderline: "⚠️ بالكاد قابل للعب",
+    verdictNo: "❌ غير موصى به",
+    detailGood: "مناسب لسلاسة عالية.",
+    detailOkay: "استخدم إعدادات منخفضة إلى متوسطة للثبات.",
+    detailLow: "خفّض الدقة أو قم بترقية البطاقة/المعالج.",
+    disclaimer: "ملاحظة: النتائج تقديرية بالذكاء الاصطناعي. الأداء الفعلي قد يختلف حسب التعريفات وتحديثات اللعبة والتبريد والبرامج الخلفية.",
+  },
+  hi: {
+    navHome: "होम",
+    navHow: "यह कैसे काम करता है",
+    navGames: "सपोर्टेड गेम्स",
+    navContact: "संपर्क",
+    languageLabel: "भाषा",
+    eyebrow: "एआई गेमर सहायक",
+    heroTitle: "क्या आपका पीसी यह गेम चला सकता है?",
+    heroSubtitle: "पीसी गेमर्स के लिए एआई-समर्थित प्रदर्शन जांच।",
+    startBtn: "परफॉर्मेंस चेक शुरू करें",
+    demoBtn: "नमूना स्पेक्स आज़माएं",
+    quickStat: "त्वरित जानकारी",
+    quickCaption: "1080p पर मध्यम जीपीयू के लिए सामान्य रेंज।",
+    instant: "तुरंत मार्गदर्शन → बेहतर प्रदर्शन",
+    formEyebrow: "परफॉर्मेंस चेक",
+    formTitle: "अपनी स्पेक्स दर्ज करें",
+    formSubtitle: "अपना गेम और हार्डवेयर चुनें और निजी सुझाव पाएं।",
+    gameLabel: "गेम शीर्षक",
+    cpuLabel: "सीपीयू",
+    gpuLabel: "जीपीयू",
+    ramLabel: "रैम",
+    resLabel: "रिज़ॉल्यूशन",
+    storageLabel: "स्टोरेज",
+    targetLabel: "लक्ष्य",
+    targetBalanced: "संतुलित विजुअल्स",
+    targetFPS: "मुझे 60+ FPS चाहिए",
+    targetQuality: "मुझे हाई ग्राफ़िक्स चाहिए",
+    submitBtn: "परफॉर्मेंस जांचें",
+    resultTitle: "आपकी रिपोर्ट",
+    fpsTitle: "अनुमानित FPS",
+    settingsTitle: "सुझाए गए सेटिंग्स",
+    upgradeTitle: "अपग्रेड सुझाव",
+    howEyebrow: "कैसे काम करता है",
+    howTitle: "इनपुट → विश्लेषण → परिणाम",
+    howStep1Title: "अपनी सेटअप बताएं",
+    howStep1Text: "सीपीयू, जीपीयू, रैम, रिज़ॉल्यूशन और लक्ष्य चुनें।",
+    howStep2Title: "हम स्कोर करते हैं",
+    howStep2Text: "हम आपके हार्डवेयर की तुलना गेम आवश्यकताओं से करते हैं।",
+    howStep3Title: "मार्गदर्शन पाएं",
+    howStep3Text: "FPS रेंज, सेटिंग्स और अपग्रेड टिप्स तुरंत पाएं।",
+    supportEyebrow: "लोकप्रिय गेम्स",
+    supportTitle: "टॉप गेम्स के लिए अनुकूल",
+    footerAbout: "अबाउट",
+    footerPrivacy: "प्राइवेसी",
+    footerTerms: "टर्म्स",
+    footerNote: "© 2025 RunForPlay. सर्वाधिकार सुरक्षित. सऊदी अरब में निर्मित 🇸🇦",
+    verdictPlayable: "✅ खेलने योग्य",
+    verdictBorderline: "⚠️ मुश्किल से खेलने योग्य",
+    verdictNo: "❌ अनुशंसित नहीं",
+    detailGood: "स्मूद गेमप्ले के लिए अच्छा मेल।",
+    detailOkay: "स्थिर खेलने के लिए लो से मीडियम सेटिंग्स रखें।",
+    detailLow: "रिज़ॉल्यूशन घटाएँ या GPU/CPU अपग्रेड करें।",
+    disclaimer: "नोट: ये परिणाम एआई अनुमान हैं। वास्तविक प्रदर्शन ड्राइवर, गेम अपडेट, कूलिंग और बैकग्राउंड ऐप्स पर निर्भर हो सकता है।",
+  },
+  ko: {
+    navHome: "홈",
+    navHow: "작동 방식",
+    navGames: "지원 게임",
+    navContact: "문의",
+    languageLabel: "언어",
+    eyebrow: "AI 게이머 어시스턴트",
+    heroTitle: "내 PC로 이 게임을 실행할 수 있을까?",
+    heroSubtitle: "PC 게이머를 위한 AI 기반 성능 체크.",
+    startBtn: "성능 체크 시작",
+    demoBtn: "샘플 사양 사용",
+    quickStat: "빠른 인사이트",
+    quickCaption: "1080p 중급 GPU의 일반적인 범위.",
+    instant: "즉시 가이드 → 더 나은 성능",
+    formEyebrow: "성능 체크",
+    formTitle: "사양을 입력하세요",
+    formSubtitle: "게임과 하드웨어를 선택해 맞춤 추천을 받으세요.",
+    gameLabel: "게임 제목",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "RAM",
+    resLabel: "해상도",
+    storageLabel: "스토리지",
+    targetLabel: "목표",
+    targetBalanced: "균형 잡힌 비주얼",
+    targetFPS: "60+ FPS 원함",
+    targetQuality: "고화질 원함",
+    submitBtn: "성능 확인",
+    resultTitle: "결과",
+    fpsTitle: "예상 FPS",
+    settingsTitle: "권장 설정",
+    upgradeTitle: "업그레이드 제안",
+    howEyebrow: "작동 방식",
+    howTitle: "입력 → 분석 → 결과",
+    howStep1Title: "셋업 입력",
+    howStep1Text: "CPU, GPU, RAM, 해상도, 목표를 선택하세요.",
+    howStep2Title: "점수 계산",
+    howStep2Text: "큐레이션된 게임 요구사항과 비교합니다.",
+    howStep3Title: "가이드 제공",
+    howStep3Text: "FPS 범위, 설정, 업그레이드 팁을 즉시 제공합니다.",
+    supportEyebrow: "인기 게임",
+    supportTitle: "주요 게임에 최적화",
+    footerAbout: "소개",
+    footerPrivacy: "개인정보",
+    footerTerms: "이용약관",
+    footerNote: "© 2025 RunForPlay. 판권 소유. 사우디아라비아 제작 🇸🇦",
+    verdictPlayable: "✅ 원활한 플레이",
+    verdictBorderline: "⚠️ 간신히 플레이 가능",
+    verdictNo: "❌ 권장하지 않음",
+    detailGood: "부드러운 플레이에 충분합니다.",
+    detailOkay: "안정성을 위해 낮음~중간 설정을 사용하세요.",
+    detailLow: "해상도를 낮추거나 GPU/CPU 업그레이드를 고려하세요.",
+    disclaimer: "참고: 결과는 AI 기반 추정치입니다. 실제 성능은 드라이버, 게임 업데이트, 냉각, 백그라운드 앱에 따라 달라질 수 있습니다.",
+  },
+  ja: {
+    navHome: "ホーム",
+    navHow: "仕組み",
+    navGames: "対応ゲーム",
+    navContact: "お問い合わせ",
+    languageLabel: "言語",
+    eyebrow: "AIゲーマーアシスタント",
+    heroTitle: "あなたのPCはこのゲームを動かせますか？",
+    heroSubtitle: "PCゲーマーのためのAI性能チェック。",
+    startBtn: "パフォーマンスチェックを開始",
+    demoBtn: "サンプルスペックを試す",
+    quickStat: "クイックインサイト",
+    quickCaption: "1080pのミドルGPUで一般的な範囲。",
+    instant: "即時ガイド → より良いパフォーマンス",
+    formEyebrow: "性能チェック",
+    formTitle: "スペックを入力",
+    formSubtitle: "ゲームとハードウェアを選び、最適な推奨を受け取る。",
+    gameLabel: "ゲームタイトル",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "メモリ",
+    resLabel: "解像度",
+    storageLabel: "ストレージ",
+    targetLabel: "目標",
+    targetBalanced: "バランス重視",
+    targetFPS: "60FPS以上希望",
+    targetQuality: "高画質希望",
+    submitBtn: "性能を確認",
+    resultTitle: "結果",
+    fpsTitle: "推定FPS",
+    settingsTitle: "推奨設定",
+    upgradeTitle: "アップグレード提案",
+    howEyebrow: "仕組み",
+    howTitle: "入力 → 解析 → 結果",
+    howStep1Title: "セットアップ入力",
+    howStep1Text: "CPU・GPU・メモリ・解像度・目標を選択。",
+    howStep2Title: "スコア算出",
+    howStep2Text: "厳選したゲーム要件と比較します。",
+    howStep3Title: "ガイド提供",
+    howStep3Text: "FPS範囲、設定、アップグレードのヒントを即時表示。",
+    supportEyebrow: "人気タイトル",
+    supportTitle: "主要ゲームに最適化",
+    footerAbout: "概要",
+    footerPrivacy: "プライバシー",
+    footerTerms: "利用規約",
+    footerNote: "© 2025 RunForPlay. 無断転載禁止。サウジアラビア製 🇸🇦",
+    verdictPlayable: "✅ プレイ可能",
+    verdictBorderline: "⚠️ ぎりぎりプレイ可能",
+    verdictNo: "❌ 推奨されません",
+    detailGood: "快適に遊べる構成です。",
+    detailOkay: "安定のため低～中設定を推奨。",
+    detailLow: "解像度を下げるかGPU/CPUアップグレードを検討してください。",
+    disclaimer: "注意: これはAIによる推定です。実際の性能はドライバー、ゲーム更新、冷却、バックグラウンドアプリに左右されます。",
+  },
+  es: {
+    navHome: "Inicio",
+    navHow: "Cómo funciona",
+    navGames: "Juegos compatibles",
+    navContact: "Contacto",
+    languageLabel: "Idioma",
+    eyebrow: "Asistente gamer con IA",
+    heroTitle: "¿Puede tu PC correr este juego?",
+    heroSubtitle: "Chequeo de rendimiento con IA para gamers de PC.",
+    startBtn: "Iniciar revisión",
+    demoBtn: "Probar ejemplo",
+    quickStat: "Vista rápida",
+    quickCaption: "Rango típico para GPUs medias en 1080p.",
+    instant: "Guía al instante → mejor rendimiento",
+    formEyebrow: "Chequeo de rendimiento",
+    formTitle: "Ingresa tus especificaciones",
+    formSubtitle: "Elige tu juego y hardware para recibir recomendaciones personalizadas.",
+    gameLabel: "Título del juego",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "RAM",
+    resLabel: "Resolución",
+    storageLabel: "Almacenamiento",
+    targetLabel: "Objetivo",
+    targetBalanced: "Visuales balanceados",
+    targetFPS: "Quiero 60+ FPS",
+    targetQuality: "Quiero gráficos altos",
+    submitBtn: "Verificar rendimiento",
+    resultTitle: "Tu resultado",
+    fpsTitle: "FPS estimados",
+    settingsTitle: "Ajustes recomendados",
+    upgradeTitle: "Sugerencias de mejora",
+    howEyebrow: "Cómo funciona",
+    howTitle: "Entrada → Análisis → Resultado",
+    howStep1Title: "Cuéntanos tu equipo",
+    howStep1Text: "Selecciona CPU, GPU, RAM, resolución y objetivo.",
+    howStep2Title: "Lo evaluamos",
+    howStep2Text: "Comparamos tu hardware con requisitos curados.",
+    howStep3Title: "Obtén guía",
+    howStep3Text: "Recibe FPS estimados, ajustes y mejoras al instante.",
+    supportEyebrow: "Títulos populares",
+    supportTitle: "Optimizado para juegos top",
+    footerAbout: "Acerca de",
+    footerPrivacy: "Privacidad",
+    footerTerms: "Términos",
+    footerNote: "© 2025 RunForPlay. Todos los derechos reservados. Hecho en Arabia Saudita 🇸🇦",
+    verdictPlayable: "✅ Jugable",
+    verdictBorderline: "⚠️ Apenas jugable",
+    verdictNo: "❌ No recomendado",
+    detailGood: "Buena combinación para jugar fluido.",
+    detailOkay: "Usa ajustes bajos a medios para mayor estabilidad.",
+    detailLow: "Baja la resolución o mejora GPU/CPU.",
+    disclaimer: "Nota: Estos resultados son estimaciones con IA. El rendimiento real puede variar según drivers, actualizaciones, refrigeración y apps en segundo plano.",
+  },
+  fr: {
+    navHome: "Accueil",
+    navHow: "Fonctionnement",
+    navGames: "Jeux pris en charge",
+    navContact: "Contact",
+    languageLabel: "Langue",
+    eyebrow: "Assistant gamer IA",
+    heroTitle: "Votre PC peut-il faire tourner ce jeu ?",
+    heroSubtitle: "Vérification de performance par IA pour les joueurs PC.",
+    startBtn: "Lancer le test",
+    demoBtn: "Essayer un exemple",
+    quickStat: "Aperçu rapide",
+    quickCaption: "Plage typique pour GPU milieu de gamme en 1080p.",
+    instant: "Guide instantané → meilleur rendu",
+    formEyebrow: "Test de performance",
+    formTitle: "Entrez vos specs",
+    formSubtitle: "Choisissez votre jeu et votre matériel pour des recommandations personnalisées.",
+    gameLabel: "Titre du jeu",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "RAM",
+    resLabel: "Résolution",
+    storageLabel: "Stockage",
+    targetLabel: "Objectif",
+    targetBalanced: "Visuels équilibrés",
+    targetFPS: "Je veux 60+ FPS",
+    targetQuality: "Je veux des graphismes élevés",
+    submitBtn: "Vérifier",
+    resultTitle: "Votre résultat",
+    fpsTitle: "FPS estimés",
+    settingsTitle: "Paramètres conseillés",
+    upgradeTitle: "Suggestions d'upgrade",
+    howEyebrow: "Fonctionnement",
+    howTitle: "Entrée → Analyse → Résultat",
+    howStep1Title: "Décrivez votre config",
+    howStep1Text: "Sélectionnez CPU, GPU, RAM, résolution et objectif.",
+    howStep2Title: "Nous notons",
+    howStep2Text: "Nous comparons votre matériel aux exigences des jeux.",
+    howStep3Title: "Recevez les conseils",
+    howStep3Text: "FPS, réglages et upgrades instantanés.",
+    supportEyebrow: "Titres populaires",
+    supportTitle: "Optimisé pour les jeux phares",
+    footerAbout: "À propos",
+    footerPrivacy: "Confidentialité",
+    footerTerms: "Conditions",
+    footerNote: "© 2025 RunForPlay. Tous droits réservés. Fabriqué en Arabie saoudite 🇸🇦",
+    verdictPlayable: "✅ Jouable",
+    verdictBorderline: "⚠️ À peine jouable",
+    verdictNo: "❌ Non recommandé",
+    detailGood: "Parfait pour un jeu fluide.",
+    detailOkay: "Utilise des réglages bas à moyens pour la stabilité.",
+    detailLow: "Baisse la résolution ou améliore GPU/CPU.",
+    disclaimer: "Remarque : résultats estimés par IA. Les performances réelles varient selon les pilotes, mises à jour, refroidissement et applications en arrière-plan.",
+  },
+  de: {
+    navHome: "Start",
+    navHow: "So funktioniert's",
+    navGames: "Unterstützte Spiele",
+    navContact: "Kontakt",
+    languageLabel: "Sprache",
+    eyebrow: "KI-Gamer-Assistent",
+    heroTitle: "Kann dein PC dieses Spiel ausführen?",
+    heroSubtitle: "KI-gestützter Performance-Check für PC-Gamer.",
+    startBtn: "Performance-Check starten",
+    demoBtn: "Beispiel testen",
+    quickStat: "Schneller Einblick",
+    quickCaption: "Typischer Bereich für Mittelklasse-GPUs bei 1080p.",
+    instant: "Sofortige Hinweise → bessere Leistung",
+    formEyebrow: "Performance-Check",
+    formTitle: "Gib deine Specs ein",
+    formSubtitle: "Wähle Spiel und Hardware für personalisierte Empfehlungen.",
+    gameLabel: "Spieltitel",
+    cpuLabel: "CPU",
+    gpuLabel: "GPU",
+    ramLabel: "RAM",
+    resLabel: "Auflösung",
+    storageLabel: "Speicher",
+    targetLabel: "Ziel",
+    targetBalanced: "Ausgewogene Grafik",
+    targetFPS: "Ich will 60+ FPS",
+    targetQuality: "Ich will hohe Grafik",
+    submitBtn: "Performance prüfen",
+    resultTitle: "Dein Ergebnis",
+    fpsTitle: "Geschätzte FPS",
+    settingsTitle: "Empfohlene Einstellungen",
+    upgradeTitle: "Upgrade-Vorschläge",
+    howEyebrow: "So funktioniert's",
+    howTitle: "Input → Analyse → Ergebnis",
+    howStep1Title: "Setup angeben",
+    howStep1Text: "CPU, GPU, RAM, Auflösung und Ziel wählen.",
+    howStep2Title: "Wir bewerten",
+    howStep2Text: "Wir vergleichen deine Hardware mit Spiele-Anforderungen.",
+    howStep3Title: "Erhalte Guidance",
+    howStep3Text: "FPS-Bereich, Einstellungen und Upgrade-Tipps sofort.",
+    supportEyebrow: "Beliebte Titel",
+    supportTitle: "Optimiert für Top-Spiele",
+    footerAbout: "Über uns",
+    footerPrivacy: "Datenschutz",
+    footerTerms: "Bedingungen",
+    footerNote: "© 2025 RunForPlay. Alle Rechte vorbehalten. Hergestellt in Saudi-Arabien 🇸🇦",
+    verdictPlayable: "✅ Spielbar",
+    verdictBorderline: "⚠️ Kaum spielbar",
+    verdictNo: "❌ Nicht empfohlen",
+    detailGood: "Gut für flüssiges Gameplay.",
+    detailOkay: "Nutze niedrige bis mittlere Settings für Stabilität.",
+    detailLow: "Reduziere die Auflösung oder rüste GPU/CPU auf.",
+    disclaimer: "Hinweis: Ergebnisse sind KI-Schätzungen. Tatsächliche Leistung variiert je nach Treibern, Updates, Kühlung und Hintergrundprogrammen.",
+  },
+};
+
+const cpus = [
+  { id: "i3-8100", label: "Intel i3-8100", score: 260 },
+  { id: "i5-9400F", label: "Intel i5-9400F", score: 420 },
+  { id: "i5-12400F", label: "Intel i5-12400F", score: 680 },
+  { id: "i7-10700K", label: "Intel i7-10700K", score: 740 },
+  { id: "i9-13900K", label: "Intel i9-13900K", score: 980 },
+  { id: "r3-3100", label: "AMD Ryzen 3 3100", score: 300 },
+  { id: "r5-3600", label: "AMD Ryzen 5 3600", score: 520 },
+  { id: "r7-5800X", label: "AMD Ryzen 7 5800X", score: 760 },
+  { id: "r5-7600", label: "AMD Ryzen 5 7600", score: 720 },
+  { id: "r7-7800x3d", label: "AMD Ryzen 7 7800X3D", score: 980 },
+];
+
+const gpus = [
+  { id: "gtx-1050", label: "NVIDIA GTX 1050", score: 260 },
+  { id: "gtx-1060", label: "NVIDIA GTX 1060", score: 360 },
+  { id: "gtx-1650", label: "NVIDIA GTX 1650", score: 340 },
+  { id: "gtx-1660s", label: "NVIDIA GTX 1660 Super", score: 430 },
+  { id: "rtx-2060", label: "NVIDIA RTX 2060", score: 520 },
+  { id: "rtx-3060", label: "NVIDIA RTX 3060", score: 660 },
+  { id: "rtx-3070", label: "NVIDIA RTX 3070", score: 780 },
+  { id: "rtx-3080", label: "NVIDIA RTX 3080", score: 900 },
+  { id: "rtx-4070", label: "NVIDIA RTX 4070", score: 950 },
+  { id: "rx-570", label: "AMD RX 570", score: 280 },
+  { id: "rx-580", label: "AMD RX 580", score: 330 },
+  { id: "rx-6600", label: "AMD RX 6600", score: 560 },
+  { id: "rx-6700xt", label: "AMD RX 6700 XT", score: 720 },
+  { id: "rx-6800", label: "AMD RX 6800", score: 840 },
+  { id: "rx-7900xt", label: "AMD RX 7900 XT", score: 980 },
+  { id: "intel-xe", label: "Intel Iris Xe", score: 190 },
+  { id: "intel-uhd", label: "Intel UHD", score: 120 },
+];
+
+const games = [
+  {
+    id: "fortnite",
+    name: "Fortnite",
+    cpuMin: 220,
+    cpuRec: 420,
+    gpuMin: 220,
+    gpuRec: 420,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "valorant",
+    name: "Valorant",
+    cpuMin: 180,
+    cpuRec: 300,
+    gpuMin: 160,
+    gpuRec: 300,
+    ramMin: 4,
+    ramRec: 8,
+  },
+  {
+    id: "gta-v",
+    name: "GTA V",
+    cpuMin: 300,
+    cpuRec: 520,
+    gpuMin: 260,
+    gpuRec: 520,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "cyberpunk",
+    name: "Cyberpunk 2077",
+    cpuMin: 520,
+    cpuRec: 800,
+    gpuMin: 520,
+    gpuRec: 860,
+    ramMin: 16,
+    ramRec: 32,
+  },
+  {
+    id: "apex",
+    name: "Apex Legends",
+    cpuMin: 320,
+    cpuRec: 520,
+    gpuMin: 320,
+    gpuRec: 520,
+    ramMin: 8,
+    ramRec: 16,
+  },
+  {
+    id: "cs2",
+    name: "Counter-Strike 2",
+    cpuMin: 220,
+    cpuRec: 420,
+    gpuMin: 220,
+    gpuRec: 420,
+    ramMin: 8,
+    ramRec: 16,
+  },
+];
+
+const gameThemes = {
+  default: { primary: "#50e3c2", secondary: "#a855f7" },
+  fortnite: { primary: "#7c5dff", secondary: "#1ec9ff" },
+  valorant: { primary: "#ff4654", secondary: "#0f1823" },
+  "gta-v": { primary: "#6dd3a3", secondary: "#0f1a1c" },
+  cyberpunk: { primary: "#f5d000", secondary: "#0c1014" },
+  apex: { primary: "#d62839", secondary: "#0b1320" },
+  cs2: { primary: "#f5a623", secondary: "#0c1624" },
+};
+
+const resolutions = {
+  720: 0.85,
+  1080: 1,
+  1440: 1.25,
+  2160: 1.6,
+};
+
+const targets = {
+  balanced: 1,
+  fps: 1.1,
+  quality: 0.9,
+};
+
+const settingsTemplates = {
+  low: [
+    "Resolution: 1280×720",
+    "Graphics Preset: Low",
+    "Textures: Low",
+    "Shadows: Off",
+    "Anti-aliasing: Off",
+    "Post-processing: Low",
+    "V-Sync: Off",
+  ],
+  medium: [
+    "Resolution: 1920×1080",
+    "Graphics Preset: Medium",
+    "Textures: Medium",
+    "Shadows: Low",
+    "Anti-aliasing: Medium",
+    "Post-processing: Low",
+    "V-Sync: Off",
+  ],
+  high: [
+    "Resolution: 2560×1440",
+    "Graphics Preset: High",
+    "Textures: High",
+    "Shadows: Medium",
+    "Anti-aliasing: High",
+    "Post-processing: Medium",
+    "V-Sync: Adaptive",
+  ],
+};
+
+let lastInput = null;
+
+function populateOptions() {
+  const cpuSelect = document.getElementById("cpu");
+  const gpuSelect = document.getElementById("gpu");
+  const gameOptions = document.getElementById("gameOptions");
+  const gameTags = document.getElementById("gameTags");
+
+  cpus.forEach((cpu) => {
+    const opt = document.createElement("option");
+    opt.value = cpu.id;
+    opt.textContent = cpu.label;
+    cpuSelect.appendChild(opt);
+  });
+
+  gpus.forEach((gpu) => {
+    const opt = document.createElement("option");
+    opt.value = gpu.id;
+    opt.textContent = gpu.label;
+    gpuSelect.appendChild(opt);
+  });
+
+  games.forEach((game) => {
+    const opt = document.createElement("option");
+    opt.value = game.name;
+    gameOptions.appendChild(opt);
+
+    const tag = document.createElement("div");
+    tag.className = "chip";
+    tag.textContent = game.name;
+    gameTags.appendChild(tag);
+  });
+}
+
+function applyTranslations(lang = "en") {
+  const dict = translations[lang] || translations.en;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const value = dict[key];
+    if (value) {
+      el.textContent = value;
+    }
+  });
+
+  document.getElementById("disclaimer").textContent = dict.disclaimer;
+}
+
+function applyGameTheme(gameId) {
+  const theme = gameThemes[gameId] || gameThemes.default;
+  const root = document.documentElement;
+  root.style.setProperty("--theme-1", theme.primary);
+  root.style.setProperty("--theme-2", theme.secondary);
+  root.style.setProperty("--accent", theme.primary);
+  root.style.setProperty("--accent-2", theme.secondary);
+}
+
+function setupLanguages() {
+  const langSelect = document.getElementById("language");
+  Object.entries(languages).forEach(([code, label]) => {
+    const opt = document.createElement("option");
+    opt.value = code;
+    opt.textContent = label;
+    langSelect.appendChild(opt);
+  });
+
+  langSelect.value = "en";
+  applyTranslations("en");
+
+  langSelect.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    applyTranslations(lang);
+    if (lastInput) {
+      const result = computePerformance(lastInput, lang);
+      renderResults(result, lang);
+    }
+  });
+}
+
+function findByLabel(collection, label) {
+  return collection.find((item) => item.label.toLowerCase() === label.toLowerCase());
+}
+
+function findById(collection, id) {
+  return collection.find((item) => item.id === id);
+}
+
+function computePerformance(input, language = "en") {
+  const dict = translations[language] || translations.en;
+  const game =
+    games.find((g) => g.name.toLowerCase() === input.game.toLowerCase()) || games[0];
+  const cpu = findById(cpus, input.cpuId) || cpus[0];
+  const gpu = findById(gpus, input.gpuId) || gpus[0];
+  const resFactor = resolutions[input.resolution] || 1;
+  const targetFactor = targets[input.target] || 1;
+
+  const cpuFactor = cpu.score / game.cpuRec;
+  const gpuFactor = gpu.score / game.gpuRec;
+  const ramFactor = input.ram / game.ramRec;
+
+  const performanceScore =
+    (Math.min(cpuFactor, gpuFactor) * 0.7 + Math.min(cpuFactor, ramFactor) * 0.3) /
+    resFactor *
+    targetFactor;
+
+  let verdictKey = "verdictPlayable";
+  let detail = dict.detailGood;
+  if (performanceScore < 0.65 || input.ram < game.ramMin) {
+    verdictKey = "verdictNo";
+    detail = dict.detailLow;
+  } else if (performanceScore < 0.95) {
+    verdictKey = "verdictBorderline";
+    detail = dict.detailOkay;
+  } else {
+    verdictKey = "verdictPlayable";
+    detail = dict.detailGood;
+  }
+
+  const baseFps = 65;
+  const fpsEstimate = Math.max(12, Math.round(baseFps * performanceScore));
+  const fpsRange = `${Math.max(10, fpsEstimate - 10)}–${fpsEstimate + 10} FPS`;
+
+  let settingsProfile = "medium";
+  if (performanceScore < 0.8) settingsProfile = "low";
+  if (performanceScore > 1.1) settingsProfile = "high";
+
+  const upgrades = [];
+  if (gpu.score < game.gpuRec * 0.9) {
+    upgrades.push(
+      `GPU is near minimum for ${game.name}. Consider at least ${suggestGpu(game.gpuRec)} for smoother play.`
+    );
+  }
+  if (cpu.score < game.cpuRec * 0.9) {
+    upgrades.push(
+      `CPU could bottleneck heavy scenes. A stronger option like ${suggestCpu(game.cpuRec)} will help.`
+    );
+  }
+  if (input.ram < game.ramRec) {
+    upgrades.push("Upgrade RAM to meet recommended capacity and reduce stutter.");
+  }
+  if (input.storage === "hdd") {
+    upgrades.push("Move the game to an SSD/NVMe for faster loads and fewer hitches.");
+  }
+
+  if (!upgrades.length) upgrades.push("Your build is well balanced—keep drivers updated for best results.");
+
+  return {
+    verdict: dict[verdictKey],
+    verdictDetail: detail,
+    fpsRange,
+    fpsDetail: `${game.name} @ ${input.resolution}p (${settingsProfile} settings)`,
+    settings: settingsTemplates[settingsProfile],
+    upgrades,
+  };
+}
+
+function suggestGpu(targetScore) {
+  const candidate = gpus.find((g) => g.score >= targetScore * 0.95);
+  return candidate ? candidate.label : "a stronger modern GPU";
+}
+
+function suggestCpu(targetScore) {
+  const candidate = cpus.find((c) => c.score >= targetScore * 0.95);
+  return candidate ? candidate.label : "a newer multi-core CPU";
+}
+
+function renderResults(result, language = "en") {
+  const dict = translations[language] || translations.en;
+  document.getElementById("verdict").textContent = result.verdict;
+  document.getElementById("verdictDetail").textContent = result.verdictDetail;
+  document.getElementById("fpsRange").textContent = result.fpsRange;
+  document.getElementById("fpsDetail").textContent = result.fpsDetail;
+
+  const settingsList = document.getElementById("settingsList");
+  const upgradeList = document.getElementById("upgradeList");
+  settingsList.innerHTML = "";
+  upgradeList.innerHTML = "";
+
+  result.settings.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    settingsList.appendChild(li);
+  });
+
+  result.upgrades.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    upgradeList.appendChild(li);
+  });
+
+  document.getElementById("results").classList.remove("hidden");
+  document.getElementById("disclaimer").textContent = dict.disclaimer;
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const gameInput = form.game.value.trim();
+  const cpuId = form.cpu.value;
+  const gpuId = form.gpu.value;
+  const ram = Number(form.ram.value);
+  const resolution = form.resolution.value;
+  const storage = form.storage.value;
+  const target = form.target.value;
+  const language = document.getElementById("language").value;
+
+  if (!gameInput) return;
+
+  const selectedGame = games.find((g) => g.name.toLowerCase() === gameInput.toLowerCase());
+  applyGameTheme(selectedGame?.id);
+
+  lastInput = { game: gameInput, cpuId, gpuId, ram, resolution, storage, target };
+
+  const result = computePerformance(lastInput, language);
+  renderResults(result, language);
+}
+
+function fillDemo() {
+  const form = document.getElementById("specForm");
+  form.game.value = "Cyberpunk 2077";
+  form.cpu.value = "r7-5800X";
+  form.gpu.value = "rtx-3070";
+  form.ram.value = "16";
+  form.resolution.value = "1440";
+  form.storage.value = "ssd";
+  form.target.value = "balanced";
+  applyGameTheme("cyberpunk");
+}
+
+function init() {
+  populateOptions();
+  setupLanguages();
+  const gameField = document.getElementById("game");
+  gameField.addEventListener("input", (e) => {
+    const value = e.target.value.trim().toLowerCase();
+    const selectedGame = games.find((g) => g.name.toLowerCase() === value);
+    applyGameTheme(selectedGame?.id);
+  });
+
+  document.getElementById("specForm").addEventListener("submit", handleSubmit);
+  document.getElementById("demoFill").addEventListener("click", fillDemo);
+  applyGameTheme("default");
+}
+
+document.addEventListener("DOMContentLoaded", init);
