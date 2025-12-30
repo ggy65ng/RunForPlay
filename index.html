@@ -20,10 +20,11 @@
       <div class="logo">RunForPlay</div>
       <nav class="nav">
         <a href="#hero" data-i18n="navHome">Home</a>
+        <a href="#checker" data-i18n="navCheck">Performance Check</a>
+        <a href="#results-section" data-i18n="navResults">Results</a>
+        <a href="#bottleneck" data-i18n="navBottleneck">Bottleneck</a>
         <a href="#how" data-i18n="navHow">How It Works</a>
         <a href="#supported" data-i18n="navGames">Supported Games</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-        <a href="#bottleneck" data-i18n="navBottleneck">Bottleneck</a>
       </nav>
       <div class="actions">
         <label for="language" class="sr-only" data-i18n="languageLabel"
@@ -129,10 +130,20 @@
           </div>
         </form>
 
-        <div id="results" class="results hidden">
+      </section>
+
+      <section id="results-section" class="results-shell">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="resultEyebrow">Your insights</p>
+          <h2 data-i18n="resultTitle">Performance results</h2>
+          <p class="subtitle" data-i18n="resultSubtitle">
+            Verdicts, FPS ranges, and recommended settings update instantly after you submit the form.
+          </p>
+        </div>
+        <div id="results" class="results glass hidden">
           <div class="result-top">
             <div>
-              <p class="eyebrow" data-i18n="resultTitle">Your result</p>
+              <p class="eyebrow" data-i18n="resultHero">Latest verdict</p>
               <h3 id="verdict"></h3>
               <p id="verdictDetail" class="subtitle"></p>
             </div>
@@ -258,7 +269,7 @@
         <a href="#checker" data-i18n="footerTerms">Terms</a>
       </div>
       <p class="footer-note" data-i18n="footerNote">
-        © 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦
+        © 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)
       </p>
     </footer>
 

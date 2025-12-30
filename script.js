@@ -12,9 +12,10 @@ const languages = {
 const translations = {
   en: {
     navHome: "Home",
+    navCheck: "Performance Check",
+    navResults: "Results",
     navHow: "How It Works",
     navGames: "Supported Games",
-    navContact: "Contact",
     navBottleneck: "Bottleneck",
     languageLabel: "Language",
     eyebrow: "AI gamer assistant",
@@ -38,7 +39,12 @@ const translations = {
     targetFPS: "I want 60+ FPS",
     targetQuality: "I want High graphics",
     submitBtn: "Check Performance",
-    resultTitle: "Your result",
+    resultEyebrow: "Your insights",
+    resultTitle: "Performance results",
+    resultSubtitle:
+      "Verdicts, FPS ranges, and recommended settings update instantly after you submit the form.",
+    resultHero: "Latest verdict",
+    navContact: "Contact",
     fpsTitle: "Estimated FPS",
     settingsTitle: "Recommended settings",
     upgradeTitle: "Upgrade suggestions",
@@ -62,7 +68,7 @@ const translations = {
     footerPrivacy: "Privacy",
     footerTerms: "Terms",
     footerNote:
-      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — crafted by 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ Playable",
     verdictBorderline: "⚠️ Barely Playable",
     verdictNo: "❌ Not Recommended",
@@ -73,6 +79,8 @@ const translations = {
   },
   ar: {
     navHome: "الرئيسية",
+    navCheck: "فحص الأداء",
+    navResults: "النتائج",
     navHow: "كيف يعمل",
     navGames: "الألعاب المدعومة",
     navContact: "تواصل",
@@ -99,7 +107,10 @@ const translations = {
     targetFPS: "أريد 60 إطارًا+",
     targetQuality: "أريد جودة عالية",
     submitBtn: "تحقق من الأداء",
-    resultTitle: "النتيجة",
+    resultEyebrow: "نتيجتك",
+    resultTitle: "نتائج الأداء",
+    resultSubtitle: "يتم تحديث الحكم ونطاق الإطارات والإعدادات مباشرة بعد إرسال النموذج.",
+    resultHero: "آخر حكم",
     fpsTitle: "معدل الإطارات المتوقع",
     settingsTitle: "الإعدادات المقترحة",
     upgradeTitle: "اقتراحات الترقية",
@@ -123,7 +134,7 @@ const translations = {
     footerPrivacy: "الخصوصية",
     footerTerms: "الشروط",
     footerNote:
-      "© 2025 RunForPlay. جميع الحقوق محفوظة. صُنع في السعودية 🇸🇦 — تم صنع الموقع من قبل 5wkw (أبو زهرة)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ قابل للعب",
     verdictBorderline: "⚠️ بالكاد قابل للعب",
     verdictNo: "❌ غير موصى به",
@@ -134,6 +145,8 @@ const translations = {
   },
   hi: {
     navHome: "होम",
+    navCheck: "परफॉर्मेंस चेक",
+    navResults: "रिजल्ट्स",
     navHow: "यह कैसे काम करता है",
     navGames: "सपोर्टेड गेम्स",
     navContact: "संपर्क",
@@ -160,7 +173,10 @@ const translations = {
     targetFPS: "मुझे 60+ FPS चाहिए",
     targetQuality: "मुझे हाई ग्राफ़िक्स चाहिए",
     submitBtn: "परफॉर्मेंस जांचें",
-    resultTitle: "आपकी रिपोर्ट",
+    resultEyebrow: "आपकी जानकारी",
+    resultTitle: "परफॉर्मेंस परिणाम",
+    resultSubtitle: "फॉर्म सबमिट करते ही निर्णय, FPS और सेटिंग्स अपडेट हो जाते हैं।",
+    resultHero: "नवीनतम निर्णय",
     fpsTitle: "अनुमानित FPS",
     settingsTitle: "सुझाए गए सेटिंग्स",
     upgradeTitle: "अपग्रेड सुझाव",
@@ -184,7 +200,7 @@ const translations = {
     footerPrivacy: "प्राइवेसी",
     footerTerms: "टर्म्स",
     footerNote:
-      "© 2025 RunForPlay. सर्वाधिकार सुरक्षित. सऊदी अरब में निर्मित 🇸🇦 — 5wkw (Abo Zahra) द्वारा बनाया गया",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ खेलने योग्य",
     verdictBorderline: "⚠️ मुश्किल से खेलने योग्य",
     verdictNo: "❌ अनुशंसित नहीं",
@@ -195,6 +211,8 @@ const translations = {
   },
   ko: {
     navHome: "홈",
+    navCheck: "성능 체크",
+    navResults: "결과",
     navHow: "작동 방식",
     navGames: "지원 게임",
     navContact: "문의",
@@ -221,7 +239,10 @@ const translations = {
     targetFPS: "60+ FPS 원함",
     targetQuality: "고화질 원함",
     submitBtn: "성능 확인",
-    resultTitle: "결과",
+    resultEyebrow: "인사이트",
+    resultTitle: "성능 결과",
+    resultSubtitle: "폼 제출 후 즉시 판정, FPS 범위, 추천 설정이 업데이트됩니다.",
+    resultHero: "최신 판정",
     fpsTitle: "예상 FPS",
     settingsTitle: "권장 설정",
     upgradeTitle: "업그레이드 제안",
@@ -245,7 +266,7 @@ const translations = {
     footerPrivacy: "개인정보",
     footerTerms: "이용약관",
     footerNote:
-      "© 2025 RunForPlay. 판권 소유. 사우디아라비아 제작 🇸🇦 — crafted by 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ 원활한 플레이",
     verdictBorderline: "⚠️ 간신히 플레이 가능",
     verdictNo: "❌ 권장하지 않음",
@@ -256,6 +277,8 @@ const translations = {
   },
   ja: {
     navHome: "ホーム",
+    navCheck: "性能チェック",
+    navResults: "結果",
     navHow: "仕組み",
     navGames: "対応ゲーム",
     navContact: "お問い合わせ",
@@ -282,7 +305,10 @@ const translations = {
     targetFPS: "60FPS以上希望",
     targetQuality: "高画質希望",
     submitBtn: "性能を確認",
-    resultTitle: "結果",
+    resultEyebrow: "インサイト",
+    resultTitle: "パフォーマンス結果",
+    resultSubtitle: "送信後すぐに判定・FPSレンジ・推奨設定が更新されます。",
+    resultHero: "最新の判定",
     fpsTitle: "推定FPS",
     settingsTitle: "推奨設定",
     upgradeTitle: "アップグレード提案",
@@ -306,7 +332,7 @@ const translations = {
     footerPrivacy: "プライバシー",
     footerTerms: "利用規約",
     footerNote:
-      "© 2025 RunForPlay. 無断転載禁止。サウジアラビア製 🇸🇦 — crafted by 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ プレイ可能",
     verdictBorderline: "⚠️ ぎりぎりプレイ可能",
     verdictNo: "❌ 推奨されません",
@@ -317,6 +343,8 @@ const translations = {
   },
   es: {
     navHome: "Inicio",
+    navCheck: "Chequeo de rendimiento",
+    navResults: "Resultados",
     navHow: "Cómo funciona",
     navGames: "Juegos compatibles",
     navContact: "Contacto",
@@ -343,7 +371,10 @@ const translations = {
     targetFPS: "Quiero 60+ FPS",
     targetQuality: "Quiero gráficos altos",
     submitBtn: "Verificar rendimiento",
-    resultTitle: "Tu resultado",
+    resultEyebrow: "Tus insights",
+    resultTitle: "Resultados de rendimiento",
+    resultSubtitle: "Tras enviar el formulario, verás al instante el veredicto, FPS y ajustes sugeridos.",
+    resultHero: "Veredicto más reciente",
     fpsTitle: "FPS estimados",
     settingsTitle: "Ajustes recomendados",
     upgradeTitle: "Sugerencias de mejora",
@@ -367,7 +398,7 @@ const translations = {
     footerPrivacy: "Privacidad",
     footerTerms: "Términos",
     footerNote:
-      "© 2025 RunForPlay. Todos los derechos reservados. Hecho en Arabia Saudita 🇸🇦 — creado por 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ Jugable",
     verdictBorderline: "⚠️ Apenas jugable",
     verdictNo: "❌ No recomendado",
@@ -378,6 +409,8 @@ const translations = {
   },
   fr: {
     navHome: "Accueil",
+    navCheck: "Vérif. performance",
+    navResults: "Résultats",
     navHow: "Fonctionnement",
     navGames: "Jeux pris en charge",
     navContact: "Contact",
@@ -404,7 +437,10 @@ const translations = {
     targetFPS: "Je veux 60+ FPS",
     targetQuality: "Je veux des graphismes élevés",
     submitBtn: "Vérifier",
-    resultTitle: "Votre résultat",
+    resultEyebrow: "Vos insights",
+    resultTitle: "Résultats de performance",
+    resultSubtitle: "Après l'envoi, le verdict, la plage FPS et les réglages se mettent à jour aussitôt.",
+    resultHero: "Dernier verdict",
     fpsTitle: "FPS estimés",
     settingsTitle: "Paramètres conseillés",
     upgradeTitle: "Suggestions d'upgrade",
@@ -428,7 +464,7 @@ const translations = {
     footerPrivacy: "Confidentialité",
     footerTerms: "Conditions",
     footerNote:
-      "© 2025 RunForPlay. Tous droits réservés. Fabriqué en Arabie saoudite 🇸🇦 — créé par 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ Jouable",
     verdictBorderline: "⚠️ À peine jouable",
     verdictNo: "❌ Non recommandé",
@@ -439,6 +475,8 @@ const translations = {
   },
   de: {
     navHome: "Start",
+    navCheck: "Performance-Check",
+    navResults: "Ergebnisse",
     navHow: "So funktioniert's",
     navGames: "Unterstützte Spiele",
     navContact: "Kontakt",
@@ -465,7 +503,10 @@ const translations = {
     targetFPS: "Ich will 60+ FPS",
     targetQuality: "Ich will hohe Grafik",
     submitBtn: "Performance prüfen",
-    resultTitle: "Dein Ergebnis",
+    resultEyebrow: "Deine Insights",
+    resultTitle: "Performance-Ergebnisse",
+    resultSubtitle: "Nach dem Absenden werden Urteil, FPS-Bereich und Empfehlungen sofort aktualisiert.",
+    resultHero: "Neuester Befund",
     fpsTitle: "Geschätzte FPS",
     settingsTitle: "Empfohlene Einstellungen",
     upgradeTitle: "Upgrade-Vorschläge",
@@ -489,7 +530,7 @@ const translations = {
     footerPrivacy: "Datenschutz",
     footerTerms: "Bedingungen",
     footerNote:
-      "© 2025 RunForPlay. Alle Rechte vorbehalten. Hergestellt in Saudi-Arabien 🇸🇦 — erstellt von 5wkw (Abo Zahra)",
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — تم صنع الموقع من قبل 5wkw (أو أبو زهره)",
     verdictPlayable: "✅ Spielbar",
     verdictBorderline: "⚠️ Kaum spielbar",
     verdictNo: "❌ Nicht empfohlen",
@@ -499,6 +540,27 @@ const translations = {
     disclaimer: "Hinweis: Ergebnisse sind KI-Schätzungen. Tatsächliche Leistung variiert je nach Treibern, Updates, Kühlung und Hintergrundprogrammen.",
   },
 };
+
+let softPalette = null;
+
+function hslToHex(h, s, l) {
+  const a = s / 100;
+  const f = (n) => {
+    const k = (n + h / 30) % 12;
+    const color = l / 100 - a * Math.max(Math.min(k - 3, 9 - k, 1), -1) / 2;
+    return Math.round(255 * color)
+      .toString(16)
+      .padStart(2, "0");
+  };
+  return `#${f(0)}${f(8)}${f(4)}`;
+}
+
+function generateSoftPalette() {
+  const hue = Math.floor(Math.random() * 360);
+  const color1 = hslToHex(hue, 58, 78);
+  const color2 = hslToHex((hue + 32) % 360, 55, 74);
+  return { soft1: color1, soft2: color2 };
+}
 
 const cpus = [
   { id: "i3-6100", label: "Intel i3-6100", score: 220 },
@@ -861,6 +923,21 @@ function applyGameTheme(gameId) {
   root.style.setProperty("--theme-2", theme.secondary);
   root.style.setProperty("--accent", theme.primary);
   root.style.setProperty("--accent-2", theme.secondary);
+  applyBackgroundMood(theme);
+}
+
+function applyBackgroundMood(theme) {
+  if (!softPalette) return;
+  const paletteTheme = theme || gameThemes.default;
+  const root = document.documentElement;
+  root.style.setProperty(
+    "--bg-soft-1",
+    `color-mix(in srgb, ${paletteTheme.primary} 22%, ${softPalette.soft1})`
+  );
+  root.style.setProperty(
+    "--bg-soft-2",
+    `color-mix(in srgb, ${paletteTheme.secondary} 20%, ${softPalette.soft2})`
+  );
 }
 
 function setupLanguages() {
@@ -1113,6 +1190,8 @@ function fillDemo() {
 }
 
 function init() {
+  softPalette = generateSoftPalette();
+  applyBackgroundMood(gameThemes.default);
   populateOptions();
   setupLanguages();
   const gameField = document.getElementById("game");
