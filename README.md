@@ -1,12 +1,13 @@
 # RunForPlay
 
-RunForPlay is a single-page, multi-language experience that estimates whether a PC can run popular games. It provides FPS ranges, recommended graphics settings, and upgrade suggestions in eight languages with a neon, glassmorphism-inspired UI.
+RunForPlay is a single-page, multi-language experience that estimates whether a PC can run popular games. It provides FPS ranges, recommended graphics settings, upgrade suggestions, and a dedicated bottleneck calculator in eight languages with a neon, glassmorphism-inspired UI.
 
 ## Features
 - Hero, form, results, how-it-works, and supported-games sections with a modern gamer aesthetic.
-- Hardware and game presets with simple scoring logic to generate verdicts, FPS ranges, settings, and upgrade tips.
+- Hardware and game presets with richer CPU/GPU libraries to generate verdicts, FPS ranges, settings, and upgrade tips.
 - Language selector with English, العربية, हिन्दी, 한국어, 日本語, Español, Français, and Deutsch translations.
 - RTL-aware layout adjustments for Arabic.
+- Bottleneck calculator to spot CPU/GPU imbalance across common resolutions.
 - Static assets only—ready for Netlify or any static host.
 
 ## Local development
@@ -26,5 +27,5 @@ RunForPlay is a single-page, multi-language experience that estimates whether a 
 
 ## Accessibility & notes
 - All labels are associated with form controls, and there's a visually hidden label for the language picker.
-- The footer includes the required line: "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦".
+- The footer includes the required line: "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — crafted by 5wkw (Abo Zahra)".
 - Performance estimations are heuristic and meant for demonstrations only.

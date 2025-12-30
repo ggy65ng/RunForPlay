@@ -23,6 +23,7 @@
         <a href="#how" data-i18n="navHow">How It Works</a>
         <a href="#supported" data-i18n="navGames">Supported Games</a>
         <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#bottleneck" data-i18n="navBottleneck">Bottleneck</a>
       </nav>
       <div class="actions">
         <label for="language" class="sr-only" data-i18n="languageLabel"
@@ -114,14 +115,6 @@
             </select>
           </div>
           <div class="field">
-            <label for="storage" data-i18n="storageLabel">Storage</label>
-            <select id="storage" name="storage">
-              <option value="nvme">NVMe SSD</option>
-              <option value="ssd" selected>SSD</option>
-              <option value="hdd">HDD</option>
-            </select>
-          </div>
-          <div class="field">
             <label for="target" data-i18n="targetLabel">Target</label>
             <select id="target" name="target">
               <option value="balanced" selected data-i18n="targetBalanced">Balanced visuals</option>
@@ -160,6 +153,62 @@
             </div>
           </div>
           <p class="disclaimer" id="disclaimer"></p>
+        </div>
+      </section>
+
+      <section id="bottleneck" class="bottleneck glass">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="bottleneckEyebrow">Fine-tune your build</p>
+          <h2 data-i18n="bottleneckTitle">Bottleneck calculator</h2>
+          <p class="subtitle" data-i18n="bottleneckSubtitle">
+            Find the limiting part of your rig and see how much performance is being held back.
+          </p>
+        </div>
+        <form id="bottleneckForm" class="form-grid compact">
+          <div class="field">
+            <label for="bn-cpu" data-i18n="cpuLabel">CPU</label>
+            <select id="bn-cpu" name="cpu" required></select>
+          </div>
+          <div class="field">
+            <label for="bn-gpu" data-i18n="gpuLabel">GPU</label>
+            <select id="bn-gpu" name="gpu" required></select>
+          </div>
+          <div class="field">
+            <label for="bn-ram" data-i18n="ramLabel">RAM</label>
+            <select id="bn-ram" name="ram">
+              <option value="8">8 GB</option>
+              <option value="12">12 GB</option>
+              <option value="16" selected>16 GB</option>
+              <option value="24">24 GB</option>
+              <option value="32">32 GB</option>
+              <option value="64">64 GB+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bn-resolution" data-i18n="resLabel">Resolution</label>
+            <select id="bn-resolution" name="resolution">
+              <option value="1080" selected>1920×1080</option>
+              <option value="1440">2560×1440</option>
+              <option value="2160">3840×2160</option>
+            </select>
+          </div>
+          <div class="field full">
+            <button type="submit" class="primary" data-i18n="bottleneckBtn">Check bottleneck</button>
+          </div>
+        </form>
+        <div class="bottleneck-result" id="bottleneckResult">
+          <div class="result-top">
+            <div>
+              <p class="eyebrow" data-i18n="bottleneckResult">Result</p>
+              <h3 id="bnSummary">Balanced build</h3>
+              <p id="bnDetail" class="subtitle"></p>
+            </div>
+            <div class="fps-box">
+              <p class="eyebrow">Impact</p>
+              <p id="bnPercent" class="stat">--</p>
+              <p id="bnHint" class="caption" data-i18n="bottleneckHint"></p>
+            </div>
+          </div>
         </div>
       </section>
 

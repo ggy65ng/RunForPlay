@@ -15,6 +15,7 @@ const translations = {
     navHow: "How It Works",
     navGames: "Supported Games",
     navContact: "Contact",
+    navBottleneck: "Bottleneck",
     languageLabel: "Language",
     eyebrow: "AI gamer assistant",
     heroTitle: "Can Your PC Run This Game?",
@@ -32,7 +33,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "RAM",
     resLabel: "Resolution",
-    storageLabel: "Storage",
     targetLabel: "Target",
     targetBalanced: "Balanced visuals",
     targetFPS: "I want 60+ FPS",
@@ -52,10 +52,17 @@ const translations = {
     howStep3Text: "Receive FPS ranges, settings, and upgrade tips instantly.",
     supportEyebrow: "Popular titles",
     supportTitle: "Optimized for top games",
+    bottleneckEyebrow: "Fine-tune your build",
+    bottleneckTitle: "Bottleneck calculator",
+    bottleneckSubtitle: "Find the limiting part of your rig and see how much performance is being held back.",
+    bottleneckBtn: "Check bottleneck",
+    bottleneckResult: "Result",
+    bottleneckHint: "CPU/GPU balance is shown for your chosen resolution and RAM.",
     footerAbout: "About",
     footerPrivacy: "Privacy",
     footerTerms: "Terms",
-    footerNote: "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. All rights reserved. Made in Saudi Arabia 🇸🇦 — crafted by 5wkw (Abo Zahra)",
     verdictPlayable: "✅ Playable",
     verdictBorderline: "⚠️ Barely Playable",
     verdictNo: "❌ Not Recommended",
@@ -69,6 +76,7 @@ const translations = {
     navHow: "كيف يعمل",
     navGames: "الألعاب المدعومة",
     navContact: "تواصل",
+    navBottleneck: "عنق الزجاجة",
     languageLabel: "اللغة",
     eyebrow: "مساعد الألعاب بالذكاء الاصطناعي",
     heroTitle: "هل يمكن لجهازك تشغيل هذه اللعبة؟",
@@ -86,7 +94,6 @@ const translations = {
     gpuLabel: "بطاقة الرسوميات",
     ramLabel: "الذاكرة",
     resLabel: "الدقة",
-    storageLabel: "التخزين",
     targetLabel: "الهدف",
     targetBalanced: "جودة متوازنة",
     targetFPS: "أريد 60 إطارًا+",
@@ -106,10 +113,17 @@ const translations = {
     howStep3Text: "نعرض نطاق الإطارات والإعدادات ونصائح الترقية فورًا.",
     supportEyebrow: "ألعاب شهيرة",
     supportTitle: "محسّن لأهم الألعاب",
+    bottleneckEyebrow: "اضبط توازنك",
+    bottleneckTitle: "حاسبة عنق الزجاجة",
+    bottleneckSubtitle: "اكتشف المكوّن الذي يحد من الأداء والنسبة التقريبية للتأثير.",
+    bottleneckBtn: "تحقق من عنق الزجاجة",
+    bottleneckResult: "النتيجة",
+    bottleneckHint: "يُعرض توازن المعالج والبطاقة بناءً على الدقة والذاكرة التي اخترتها.",
     footerAbout: "حول",
     footerPrivacy: "الخصوصية",
     footerTerms: "الشروط",
-    footerNote: "© 2025 RunForPlay. جميع الحقوق محفوظة. صُنع في السعودية 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. جميع الحقوق محفوظة. صُنع في السعودية 🇸🇦 — تم صنع الموقع من قبل 5wkw (أبو زهرة)",
     verdictPlayable: "✅ قابل للعب",
     verdictBorderline: "⚠️ بالكاد قابل للعب",
     verdictNo: "❌ غير موصى به",
@@ -123,6 +137,7 @@ const translations = {
     navHow: "यह कैसे काम करता है",
     navGames: "सपोर्टेड गेम्स",
     navContact: "संपर्क",
+    navBottleneck: "बॉटलनेक",
     languageLabel: "भाषा",
     eyebrow: "एआई गेमर सहायक",
     heroTitle: "क्या आपका पीसी यह गेम चला सकता है?",
@@ -140,7 +155,6 @@ const translations = {
     gpuLabel: "जीपीयू",
     ramLabel: "रैम",
     resLabel: "रिज़ॉल्यूशन",
-    storageLabel: "स्टोरेज",
     targetLabel: "लक्ष्य",
     targetBalanced: "संतुलित विजुअल्स",
     targetFPS: "मुझे 60+ FPS चाहिए",
@@ -160,10 +174,17 @@ const translations = {
     howStep3Text: "FPS रेंज, सेटिंग्स और अपग्रेड टिप्स तुरंत पाएं।",
     supportEyebrow: "लोकप्रिय गेम्स",
     supportTitle: "टॉप गेम्स के लिए अनुकूल",
+    bottleneckEyebrow: "अपनी बिल्ड संतुलित करें",
+    bottleneckTitle: "बॉटलनेक कैलकुलेटर",
+    bottleneckSubtitle: "जानें कौन सा पार्ट प्रदर्शन को रोक रहा है और कितना।",
+    bottleneckBtn: "बॉटलनेक जांचें",
+    bottleneckResult: "परिणाम",
+    bottleneckHint: "चयनित रिज़ॉल्यूशन और रैम के आधार पर CPU/GPU संतुलन दिखाया गया है।",
     footerAbout: "अबाउट",
     footerPrivacy: "प्राइवेसी",
     footerTerms: "टर्म्स",
-    footerNote: "© 2025 RunForPlay. सर्वाधिकार सुरक्षित. सऊदी अरब में निर्मित 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. सर्वाधिकार सुरक्षित. सऊदी अरब में निर्मित 🇸🇦 — 5wkw (Abo Zahra) द्वारा बनाया गया",
     verdictPlayable: "✅ खेलने योग्य",
     verdictBorderline: "⚠️ मुश्किल से खेलने योग्य",
     verdictNo: "❌ अनुशंसित नहीं",
@@ -177,6 +198,7 @@ const translations = {
     navHow: "작동 방식",
     navGames: "지원 게임",
     navContact: "문의",
+    navBottleneck: "병목",
     languageLabel: "언어",
     eyebrow: "AI 게이머 어시스턴트",
     heroTitle: "내 PC로 이 게임을 실행할 수 있을까?",
@@ -194,7 +216,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "RAM",
     resLabel: "해상도",
-    storageLabel: "스토리지",
     targetLabel: "목표",
     targetBalanced: "균형 잡힌 비주얼",
     targetFPS: "60+ FPS 원함",
@@ -214,10 +235,17 @@ const translations = {
     howStep3Text: "FPS 범위, 설정, 업그레이드 팁을 즉시 제공합니다.",
     supportEyebrow: "인기 게임",
     supportTitle: "주요 게임에 최적화",
+    bottleneckEyebrow: "밸런스 확인",
+    bottleneckTitle: "병목 계산기",
+    bottleneckSubtitle: "어떤 부품이 성능을 제한하는지와 대략적인 영향도를 확인하세요.",
+    bottleneckBtn: "병목 확인",
+    bottleneckResult: "결과",
+    bottleneckHint: "선택한 해상도와 RAM 기준으로 CPU/GPU 밸런스를 표시합니다.",
     footerAbout: "소개",
     footerPrivacy: "개인정보",
     footerTerms: "이용약관",
-    footerNote: "© 2025 RunForPlay. 판권 소유. 사우디아라비아 제작 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. 판권 소유. 사우디아라비아 제작 🇸🇦 — crafted by 5wkw (Abo Zahra)",
     verdictPlayable: "✅ 원활한 플레이",
     verdictBorderline: "⚠️ 간신히 플레이 가능",
     verdictNo: "❌ 권장하지 않음",
@@ -231,6 +259,7 @@ const translations = {
     navHow: "仕組み",
     navGames: "対応ゲーム",
     navContact: "お問い合わせ",
+    navBottleneck: "ボトルネック",
     languageLabel: "言語",
     eyebrow: "AIゲーマーアシスタント",
     heroTitle: "あなたのPCはこのゲームを動かせますか？",
@@ -248,7 +277,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "メモリ",
     resLabel: "解像度",
-    storageLabel: "ストレージ",
     targetLabel: "目標",
     targetBalanced: "バランス重視",
     targetFPS: "60FPS以上希望",
@@ -268,10 +296,17 @@ const translations = {
     howStep3Text: "FPS範囲、設定、アップグレードのヒントを即時表示。",
     supportEyebrow: "人気タイトル",
     supportTitle: "主要ゲームに最適化",
+    bottleneckEyebrow: "バランスを確認",
+    bottleneckTitle: "ボトルネック計算機",
+    bottleneckSubtitle: "どのパーツが性能を抑えているかと影響度を確認します。",
+    bottleneckBtn: "ボトルネックを確認",
+    bottleneckResult: "結果",
+    bottleneckHint: "選択した解像度とメモリに基づきCPU/GPUバランスを表示します。",
     footerAbout: "概要",
     footerPrivacy: "プライバシー",
     footerTerms: "利用規約",
-    footerNote: "© 2025 RunForPlay. 無断転載禁止。サウジアラビア製 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. 無断転載禁止。サウジアラビア製 🇸🇦 — crafted by 5wkw (Abo Zahra)",
     verdictPlayable: "✅ プレイ可能",
     verdictBorderline: "⚠️ ぎりぎりプレイ可能",
     verdictNo: "❌ 推奨されません",
@@ -285,6 +320,7 @@ const translations = {
     navHow: "Cómo funciona",
     navGames: "Juegos compatibles",
     navContact: "Contacto",
+    navBottleneck: "Cuello de botella",
     languageLabel: "Idioma",
     eyebrow: "Asistente gamer con IA",
     heroTitle: "¿Puede tu PC correr este juego?",
@@ -302,7 +338,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "RAM",
     resLabel: "Resolución",
-    storageLabel: "Almacenamiento",
     targetLabel: "Objetivo",
     targetBalanced: "Visuales balanceados",
     targetFPS: "Quiero 60+ FPS",
@@ -322,10 +357,17 @@ const translations = {
     howStep3Text: "Recibe FPS estimados, ajustes y mejoras al instante.",
     supportEyebrow: "Títulos populares",
     supportTitle: "Optimizado para juegos top",
+    bottleneckEyebrow: "Equilibra tu build",
+    bottleneckTitle: "Calculadora de cuello de botella",
+    bottleneckSubtitle: "Descubre qué parte limita el rendimiento y el porcentaje aproximado.",
+    bottleneckBtn: "Comprobar cuello de botella",
+    bottleneckResult: "Resultado",
+    bottleneckHint: "El balance CPU/GPU se muestra según tu resolución y RAM.",
     footerAbout: "Acerca de",
     footerPrivacy: "Privacidad",
     footerTerms: "Términos",
-    footerNote: "© 2025 RunForPlay. Todos los derechos reservados. Hecho en Arabia Saudita 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. Todos los derechos reservados. Hecho en Arabia Saudita 🇸🇦 — creado por 5wkw (Abo Zahra)",
     verdictPlayable: "✅ Jugable",
     verdictBorderline: "⚠️ Apenas jugable",
     verdictNo: "❌ No recomendado",
@@ -339,6 +381,7 @@ const translations = {
     navHow: "Fonctionnement",
     navGames: "Jeux pris en charge",
     navContact: "Contact",
+    navBottleneck: "Goulot",
     languageLabel: "Langue",
     eyebrow: "Assistant gamer IA",
     heroTitle: "Votre PC peut-il faire tourner ce jeu ?",
@@ -356,7 +399,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "RAM",
     resLabel: "Résolution",
-    storageLabel: "Stockage",
     targetLabel: "Objectif",
     targetBalanced: "Visuels équilibrés",
     targetFPS: "Je veux 60+ FPS",
@@ -376,10 +418,17 @@ const translations = {
     howStep3Text: "FPS, réglages et upgrades instantanés.",
     supportEyebrow: "Titres populaires",
     supportTitle: "Optimisé pour les jeux phares",
+    bottleneckEyebrow: "Équilibrez votre build",
+    bottleneckTitle: "Calculateur de goulot d'étranglement",
+    bottleneckSubtitle: "Identifiez la pièce limitante et l'impact approximatif sur les performances.",
+    bottleneckBtn: "Vérifier le goulot",
+    bottleneckResult: "Résultat",
+    bottleneckHint: "L'équilibre CPU/GPU est basé sur votre résolution et RAM.",
     footerAbout: "À propos",
     footerPrivacy: "Confidentialité",
     footerTerms: "Conditions",
-    footerNote: "© 2025 RunForPlay. Tous droits réservés. Fabriqué en Arabie saoudite 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. Tous droits réservés. Fabriqué en Arabie saoudite 🇸🇦 — créé par 5wkw (Abo Zahra)",
     verdictPlayable: "✅ Jouable",
     verdictBorderline: "⚠️ À peine jouable",
     verdictNo: "❌ Non recommandé",
@@ -393,6 +442,7 @@ const translations = {
     navHow: "So funktioniert's",
     navGames: "Unterstützte Spiele",
     navContact: "Kontakt",
+    navBottleneck: "Flaschenhals",
     languageLabel: "Sprache",
     eyebrow: "KI-Gamer-Assistent",
     heroTitle: "Kann dein PC dieses Spiel ausführen?",
@@ -410,7 +460,6 @@ const translations = {
     gpuLabel: "GPU",
     ramLabel: "RAM",
     resLabel: "Auflösung",
-    storageLabel: "Speicher",
     targetLabel: "Ziel",
     targetBalanced: "Ausgewogene Grafik",
     targetFPS: "Ich will 60+ FPS",
@@ -430,10 +479,17 @@ const translations = {
     howStep3Text: "FPS-Bereich, Einstellungen und Upgrade-Tipps sofort.",
     supportEyebrow: "Beliebte Titel",
     supportTitle: "Optimiert für Top-Spiele",
+    bottleneckEyebrow: "Balance prüfen",
+    bottleneckTitle: "Flaschenhals-Rechner",
+    bottleneckSubtitle: "Finde das limitierende Teil und den ungefähren Einfluss auf die Leistung.",
+    bottleneckBtn: "Flaschenhals prüfen",
+    bottleneckResult: "Ergebnis",
+    bottleneckHint: "CPU/GPU-Balance wird basierend auf Auflösung und RAM gezeigt.",
     footerAbout: "Über uns",
     footerPrivacy: "Datenschutz",
     footerTerms: "Bedingungen",
-    footerNote: "© 2025 RunForPlay. Alle Rechte vorbehalten. Hergestellt in Saudi-Arabien 🇸🇦",
+    footerNote:
+      "© 2025 RunForPlay. Alle Rechte vorbehalten. Hergestellt in Saudi-Arabien 🇸🇦 — erstellt von 5wkw (Abo Zahra)",
     verdictPlayable: "✅ Spielbar",
     verdictBorderline: "⚠️ Kaum spielbar",
     verdictNo: "❌ Nicht empfohlen",
@@ -445,34 +501,118 @@ const translations = {
 };
 
 const cpus = [
+  { id: "i3-6100", label: "Intel i3-6100", score: 220 },
   { id: "i3-8100", label: "Intel i3-8100", score: 260 },
-  { id: "i5-9400F", label: "Intel i5-9400F", score: 420 },
+  { id: "i3-10100", label: "Intel i3-10100", score: 320 },
+  { id: "i3-12100", label: "Intel i3-12100", score: 430 },
+  { id: "i3-14100", label: "Intel i3-14100", score: 470 },
+  { id: "i5-4460", label: "Intel i5-4460", score: 260 },
+  { id: "i5-6500", label: "Intel i5-6500", score: 340 },
+  { id: "i5-8400", label: "Intel i5-8400", score: 410 },
+  { id: "i5-9400F", label: "Intel i5-9400F", score: 430 },
+  { id: "i5-10400F", label: "Intel i5-10400F", score: 520 },
+  { id: "i5-11400F", label: "Intel i5-11400F", score: 590 },
   { id: "i5-12400F", label: "Intel i5-12400F", score: 680 },
+  { id: "i5-13400F", label: "Intel i5-13400F", score: 740 },
+  { id: "i5-14400F", label: "Intel i5-14400F", score: 770 },
+  { id: "i7-4790K", label: "Intel i7-4790K", score: 400 },
+  { id: "i7-7700K", label: "Intel i7-7700K", score: 520 },
+  { id: "i7-8700K", label: "Intel i7-8700K", score: 640 },
+  { id: "i7-9700K", label: "Intel i7-9700K", score: 700 },
   { id: "i7-10700K", label: "Intel i7-10700K", score: 740 },
+  { id: "i7-11700K", label: "Intel i7-11700K", score: 780 },
+  { id: "i7-12700K", label: "Intel i7-12700K", score: 850 },
+  { id: "i7-13700K", label: "Intel i7-13700K", score: 930 },
+  { id: "i7-14700K", label: "Intel i7-14700K", score: 960 },
+  { id: "i9-9900K", label: "Intel i9-9900K", score: 760 },
+  { id: "i9-10900K", label: "Intel i9-10900K", score: 820 },
+  { id: "i9-11900K", label: "Intel i9-11900K", score: 860 },
+  { id: "i9-12900K", label: "Intel i9-12900K", score: 930 },
   { id: "i9-13900K", label: "Intel i9-13900K", score: 980 },
+  { id: "i9-14900K", label: "Intel i9-14900K", score: 990 },
+  { id: "r3-1200", label: "AMD Ryzen 3 1200", score: 200 },
   { id: "r3-3100", label: "AMD Ryzen 3 3100", score: 300 },
+  { id: "r3-3300x", label: "AMD Ryzen 3 3300X", score: 360 },
+  { id: "r5-2600", label: "AMD Ryzen 5 2600", score: 420 },
   { id: "r5-3600", label: "AMD Ryzen 5 3600", score: 520 },
-  { id: "r7-5800X", label: "AMD Ryzen 7 5800X", score: 760 },
+  { id: "r5-5600", label: "AMD Ryzen 5 5600", score: 600 },
+  { id: "r5-5600x", label: "AMD Ryzen 5 5600X", score: 640 },
   { id: "r5-7600", label: "AMD Ryzen 5 7600", score: 720 },
+  { id: "r5-7600x", label: "AMD Ryzen 5 7600X", score: 760 },
+  { id: "r7-3700x", label: "AMD Ryzen 7 3700X", score: 620 },
+  { id: "r7-5800X", label: "AMD Ryzen 7 5800X", score: 760 },
+  { id: "r7-5800x3d", label: "AMD Ryzen 7 5800X3D", score: 880 },
+  { id: "r7-7700x", label: "AMD Ryzen 7 7700X", score: 860 },
   { id: "r7-7800x3d", label: "AMD Ryzen 7 7800X3D", score: 980 },
+  { id: "r9-5900x", label: "AMD Ryzen 9 5900X", score: 860 },
+  { id: "r9-7900x", label: "AMD Ryzen 9 7900X", score: 950 },
+  { id: "r9-7950x", label: "AMD Ryzen 9 7950X", score: 990 },
 ];
 
 const gpus = [
+  { id: "gtx-750", label: "NVIDIA GTX 750", score: 170 },
+  { id: "gtx-960", label: "NVIDIA GTX 960", score: 260 },
+  { id: "gtx-970", label: "NVIDIA GTX 970", score: 340 },
+  { id: "gtx-980", label: "NVIDIA GTX 980", score: 420 },
+  { id: "gtx-980ti", label: "NVIDIA GTX 980 Ti", score: 470 },
   { id: "gtx-1050", label: "NVIDIA GTX 1050", score: 260 },
+  { id: "gtx-1050ti", label: "NVIDIA GTX 1050 Ti", score: 290 },
   { id: "gtx-1060", label: "NVIDIA GTX 1060", score: 360 },
+  { id: "gtx-1070", label: "NVIDIA GTX 1070", score: 460 },
+  { id: "gtx-1080", label: "NVIDIA GTX 1080", score: 540 },
+  { id: "gtx-1080ti", label: "NVIDIA GTX 1080 Ti", score: 620 },
   { id: "gtx-1650", label: "NVIDIA GTX 1650", score: 340 },
+  { id: "gtx-1660", label: "NVIDIA GTX 1660", score: 400 },
   { id: "gtx-1660s", label: "NVIDIA GTX 1660 Super", score: 430 },
+  { id: "gtx-1660ti", label: "NVIDIA GTX 1660 Ti", score: 450 },
   { id: "rtx-2060", label: "NVIDIA RTX 2060", score: 520 },
+  { id: "rtx-2060s", label: "NVIDIA RTX 2060 Super", score: 560 },
+  { id: "rtx-2070", label: "NVIDIA RTX 2070", score: 610 },
+  { id: "rtx-2070s", label: "NVIDIA RTX 2070 Super", score: 650 },
+  { id: "rtx-2080", label: "NVIDIA RTX 2080", score: 700 },
+  { id: "rtx-2080s", label: "NVIDIA RTX 2080 Super", score: 740 },
+  { id: "rtx-2080ti", label: "NVIDIA RTX 2080 Ti", score: 800 },
+  { id: "rtx-3050", label: "NVIDIA RTX 3050", score: 540 },
   { id: "rtx-3060", label: "NVIDIA RTX 3060", score: 660 },
+  { id: "rtx-3060ti", label: "NVIDIA RTX 3060 Ti", score: 720 },
   { id: "rtx-3070", label: "NVIDIA RTX 3070", score: 780 },
+  { id: "rtx-3070ti", label: "NVIDIA RTX 3070 Ti", score: 820 },
   { id: "rtx-3080", label: "NVIDIA RTX 3080", score: 900 },
-  { id: "rtx-4070", label: "NVIDIA RTX 4070", score: 950 },
+  { id: "rtx-3080ti", label: "NVIDIA RTX 3080 Ti", score: 940 },
+  { id: "rtx-3090", label: "NVIDIA RTX 3090", score: 980 },
+  { id: "rtx-3090ti", label: "NVIDIA RTX 3090 Ti", score: 1000 },
+  { id: "rtx-4050", label: "NVIDIA RTX 4050", score: 600 },
+  { id: "rtx-4060", label: "NVIDIA RTX 4060", score: 720 },
+  { id: "rtx-4060ti", label: "NVIDIA RTX 4060 Ti", score: 780 },
+  { id: "rtx-4070", label: "NVIDIA RTX 4070", score: 880 },
+  { id: "rtx-4070ti", label: "NVIDIA RTX 4070 Ti", score: 940 },
+  { id: "rtx-4080", label: "NVIDIA RTX 4080", score: 1020 },
+  { id: "rtx-4090", label: "NVIDIA RTX 4090", score: 1100 },
+  { id: "rtx-5070", label: "NVIDIA RTX 5070", score: 980 },
+  { id: "rtx-5080", label: "NVIDIA RTX 5080", score: 1120 },
+  { id: "rtx-5090", label: "NVIDIA RTX 5090", score: 1180 },
+  { id: "rx-550", label: "AMD RX 550", score: 180 },
+  { id: "rx-560", label: "AMD RX 560", score: 230 },
   { id: "rx-570", label: "AMD RX 570", score: 280 },
   { id: "rx-580", label: "AMD RX 580", score: 330 },
+  { id: "rx-590", label: "AMD RX 590", score: 360 },
+  { id: "rx-5500xt", label: "AMD RX 5500 XT", score: 420 },
+  { id: "rx-5600xt", label: "AMD RX 5600 XT", score: 520 },
+  { id: "rx-5700xt", label: "AMD RX 5700 XT", score: 660 },
   { id: "rx-6600", label: "AMD RX 6600", score: 560 },
+  { id: "rx-6600xt", label: "AMD RX 6600 XT", score: 620 },
+  { id: "rx-6650xt", label: "AMD RX 6650 XT", score: 660 },
+  { id: "rx-6700", label: "AMD RX 6700", score: 680 },
   { id: "rx-6700xt", label: "AMD RX 6700 XT", score: 720 },
+  { id: "rx-6750xt", label: "AMD RX 6750 XT", score: 760 },
   { id: "rx-6800", label: "AMD RX 6800", score: 840 },
+  { id: "rx-6800xt", label: "AMD RX 6800 XT", score: 900 },
+  { id: "rx-6900xt", label: "AMD RX 6900 XT", score: 960 },
+  { id: "rx-7600", label: "AMD RX 7600", score: 720 },
+  { id: "rx-7700xt", label: "AMD RX 7700 XT", score: 840 },
+  { id: "rx-7800xt", label: "AMD RX 7800 XT", score: 920 },
   { id: "rx-7900xt", label: "AMD RX 7900 XT", score: 980 },
+  { id: "rx-7900xtx", label: "AMD RX 7900 XTX", score: 1040 },
   { id: "intel-xe", label: "Intel Iris Xe", score: 190 },
   { id: "intel-uhd", label: "Intel UHD", score: 120 },
 ];
@@ -538,6 +678,56 @@ const games = [
     ramMin: 8,
     ramRec: 16,
   },
+  {
+    id: "warzone",
+    name: "Call of Duty: Warzone",
+    cpuMin: 520,
+    cpuRec: 780,
+    gpuMin: 520,
+    gpuRec: 820,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "bops6",
+    name: "Call of Duty: Black Ops 6",
+    cpuMin: 560,
+    cpuRec: 820,
+    gpuMin: 560,
+    gpuRec: 880,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "bops7",
+    name: "Call of Duty: Black Ops 7",
+    cpuMin: 600,
+    cpuRec: 880,
+    gpuMin: 620,
+    gpuRec: 940,
+    ramMin: 16,
+    ramRec: 24,
+  },
+  {
+    id: "elden-ring",
+    name: "Elden Ring",
+    cpuMin: 420,
+    cpuRec: 620,
+    gpuMin: 420,
+    gpuRec: 680,
+    ramMin: 12,
+    ramRec: 16,
+  },
+  {
+    id: "starfield",
+    name: "Starfield",
+    cpuMin: 620,
+    cpuRec: 900,
+    gpuMin: 620,
+    gpuRec: 980,
+    ramMin: 16,
+    ramRec: 24,
+  },
 ];
 
 const gameThemes = {
@@ -548,6 +738,11 @@ const gameThemes = {
   cyberpunk: { primary: "#f5d000", secondary: "#0c1014" },
   apex: { primary: "#d62839", secondary: "#0b1320" },
   cs2: { primary: "#f5a623", secondary: "#0c1624" },
+  warzone: { primary: "#00c2ff", secondary: "#0b1723" },
+  bops6: { primary: "#ff7a00", secondary: "#0f0f10" },
+  bops7: { primary: "#9e1b32", secondary: "#0b0c10" },
+  "elden-ring": { primary: "#9fb25b", secondary: "#0a0f0c" },
+  starfield: { primary: "#78a0ff", secondary: "#0d1020" },
 };
 
 const resolutions = {
@@ -598,6 +793,8 @@ let lastInput = null;
 function populateOptions() {
   const cpuSelect = document.getElementById("cpu");
   const gpuSelect = document.getElementById("gpu");
+  const bnCpuSelect = document.getElementById("bn-cpu");
+  const bnGpuSelect = document.getElementById("bn-gpu");
   const gameOptions = document.getElementById("gameOptions");
   const gameTags = document.getElementById("gameTags");
 
@@ -606,6 +803,13 @@ function populateOptions() {
     opt.value = cpu.id;
     opt.textContent = cpu.label;
     cpuSelect.appendChild(opt);
+
+    if (bnCpuSelect) {
+      const bnOpt = document.createElement("option");
+      bnOpt.value = cpu.id;
+      bnOpt.textContent = cpu.label;
+      bnCpuSelect.appendChild(bnOpt);
+    }
   });
 
   gpus.forEach((gpu) => {
@@ -613,6 +817,13 @@ function populateOptions() {
     opt.value = gpu.id;
     opt.textContent = gpu.label;
     gpuSelect.appendChild(opt);
+
+    if (bnGpuSelect) {
+      const bnOpt = document.createElement("option");
+      bnOpt.value = gpu.id;
+      bnOpt.textContent = gpu.label;
+      bnGpuSelect.appendChild(bnOpt);
+    }
   });
 
   games.forEach((game) => {
@@ -671,6 +882,19 @@ function setupLanguages() {
       const result = computePerformance(lastInput, lang);
       renderResults(result, lang);
     }
+    const bnForm = document.getElementById("bottleneckForm");
+    if (bnForm) {
+      const bnResult = computeBottleneck(
+        {
+          cpuId: bnForm["bn-cpu"].value || cpus[0].id,
+          gpuId: bnForm["bn-gpu"].value || gpus[0].id,
+          ram: Number(bnForm["bn-ram"].value) || 16,
+          resolution: bnForm["bn-resolution"].value || "1080",
+        },
+        lang
+      );
+      renderBottleneck(bnResult, lang);
+    }
   });
 }
 
@@ -695,10 +919,12 @@ function computePerformance(input, language = "en") {
   const gpuFactor = gpu.score / game.gpuRec;
   const ramFactor = input.ram / game.ramRec;
 
-  const performanceScore =
-    (Math.min(cpuFactor, gpuFactor) * 0.7 + Math.min(cpuFactor, ramFactor) * 0.3) /
+  const balanceScore =
+    (Math.min(cpuFactor, gpuFactor) * 0.65 + Math.min(cpuFactor, ramFactor) * 0.35) /
     resFactor *
     targetFactor;
+  const headroom = Math.min(Math.max(cpuFactor, gpuFactor), 1.8);
+  const performanceScore = balanceScore * (0.7 + headroom * 0.35);
 
   let verdictKey = "verdictPlayable";
   let detail = dict.detailGood;
@@ -713,13 +939,14 @@ function computePerformance(input, language = "en") {
     detail = dict.detailGood;
   }
 
-  const baseFps = 65;
-  const fpsEstimate = Math.max(12, Math.round(baseFps * performanceScore));
-  const fpsRange = `${Math.max(10, fpsEstimate - 10)}–${fpsEstimate + 10} FPS`;
+  const baseFps = 90;
+  const fpsEstimate = Math.max(15, Math.round(baseFps * performanceScore));
+  const spread = Math.max(8, Math.round(fpsEstimate * 0.14));
+  const fpsRange = `${Math.max(12, fpsEstimate - spread)}–${fpsEstimate + spread} FPS`;
 
   let settingsProfile = "medium";
-  if (performanceScore < 0.8) settingsProfile = "low";
-  if (performanceScore > 1.1) settingsProfile = "high";
+  if (performanceScore < 0.85) settingsProfile = "low";
+  if (performanceScore > 1.25) settingsProfile = "high";
 
   const upgrades = [];
   if (gpu.score < game.gpuRec * 0.9) {
@@ -735,10 +962,6 @@ function computePerformance(input, language = "en") {
   if (input.ram < game.ramRec) {
     upgrades.push("Upgrade RAM to meet recommended capacity and reduce stutter.");
   }
-  if (input.storage === "hdd") {
-    upgrades.push("Move the game to an SSD/NVMe for faster loads and fewer hitches.");
-  }
-
   if (!upgrades.length) upgrades.push("Your build is well balanced—keep drivers updated for best results.");
 
   return {
@@ -749,6 +972,50 @@ function computePerformance(input, language = "en") {
     settings: settingsTemplates[settingsProfile],
     upgrades,
   };
+}
+
+function computeBottleneck(input, language = "en") {
+  const dict = translations[language] || translations.en;
+  const cpu = findById(cpus, input.cpuId) || cpus[0];
+  const gpu = findById(gpus, input.gpuId) || gpus[0];
+  const resFactor = resolutions[input.resolution] || 1;
+  const ram = Number(input.ram) || 16;
+
+  const ramAssist = 1 + Math.min(0.12, (ram - 16) / 160);
+  const cpuEffective = cpu.score * ramAssist;
+  const gpuEffective = gpu.score / resFactor;
+
+  const higher = Math.max(cpuEffective, gpuEffective);
+  const lower = Math.max(1, Math.min(cpuEffective, gpuEffective));
+  const difference = Math.max(0, higher - lower);
+  let limiter = "balanced";
+
+  if (cpuEffective < gpuEffective * 0.9) limiter = "cpu";
+  if (gpuEffective < cpuEffective * 0.9) limiter = "gpu";
+
+  const rawPercent = (difference / higher) * 100;
+  const midPercent = Math.max(4, Math.min(55, rawPercent + 3));
+  const percentRange = `${Math.round(Math.max(3, midPercent - 4))}–${Math.round(midPercent + 4)}%`;
+
+  let summary = "Balanced build";
+  let detail = dict.bottleneckHint || "CPU/GPU balance shown for your resolution.";
+
+  if (limiter === "cpu") {
+    summary = "CPU is limiting";
+    detail = `Your CPU is holding back this GPU by roughly ${percentRange} at ${input.resolution}p. ${suggestCpu(
+      gpu.score
+    )} will unlock more frames.`;
+  } else if (limiter === "gpu") {
+    summary = "GPU is limiting";
+    detail = `Your GPU is the ceiling by about ${percentRange} at ${input.resolution}p. ${suggestGpu(
+      cpu.score
+    )} would ease the bottleneck.`;
+  } else {
+    summary = "Well balanced";
+    detail = "CPU, GPU, and RAM look aligned for gaming at this resolution.";
+  }
+
+  return { summary, detail, percentRange };
 }
 
 function suggestGpu(targetScore) {
@@ -789,6 +1056,14 @@ function renderResults(result, language = "en") {
   document.getElementById("disclaimer").textContent = dict.disclaimer;
 }
 
+function renderBottleneck(result, language = "en") {
+  const dict = translations[language] || translations.en;
+  document.getElementById("bnSummary").textContent = result.summary;
+  document.getElementById("bnDetail").textContent = result.detail;
+  document.getElementById("bnPercent").textContent = result.percentRange;
+  document.getElementById("bnHint").textContent = dict.bottleneckHint;
+}
+
 function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
@@ -797,7 +1072,6 @@ function handleSubmit(e) {
   const gpuId = form.gpu.value;
   const ram = Number(form.ram.value);
   const resolution = form.resolution.value;
-  const storage = form.storage.value;
   const target = form.target.value;
   const language = document.getElementById("language").value;
 
@@ -806,10 +1080,25 @@ function handleSubmit(e) {
   const selectedGame = games.find((g) => g.name.toLowerCase() === gameInput.toLowerCase());
   applyGameTheme(selectedGame?.id);
 
-  lastInput = { game: gameInput, cpuId, gpuId, ram, resolution, storage, target };
+  lastInput = { game: gameInput, cpuId, gpuId, ram, resolution, target };
 
   const result = computePerformance(lastInput, language);
   renderResults(result, language);
+}
+
+function handleBottleneck(e) {
+  e.preventDefault();
+  const form = e.target;
+  const language = document.getElementById("language").value;
+  const input = {
+    cpuId: form["bn-cpu"].value,
+    gpuId: form["bn-gpu"].value,
+    ram: Number(form["bn-ram"].value),
+    resolution: form["bn-resolution"].value,
+  };
+
+  const result = computeBottleneck(input, language);
+  renderBottleneck(result, language);
 }
 
 function fillDemo() {
@@ -819,7 +1108,6 @@ function fillDemo() {
   form.gpu.value = "rtx-3070";
   form.ram.value = "16";
   form.resolution.value = "1440";
-  form.storage.value = "ssd";
   form.target.value = "balanced";
   applyGameTheme("cyberpunk");
 }
@@ -836,6 +1124,23 @@ function init() {
 
   document.getElementById("specForm").addEventListener("submit", handleSubmit);
   document.getElementById("demoFill").addEventListener("click", fillDemo);
+  const bnForm = document.getElementById("bottleneckForm");
+  if (bnForm) {
+    bnForm.addEventListener("submit", handleBottleneck);
+    const language = document.getElementById("language").value;
+    if (findById(cpus, "i5-12400F")) bnForm["bn-cpu"].value = "i5-12400F";
+    if (findById(gpus, "rtx-3060")) bnForm["bn-gpu"].value = "rtx-3060";
+    const baselineBn = computeBottleneck(
+      {
+        cpuId: bnForm["bn-cpu"].value || cpus[0].id,
+        gpuId: bnForm["bn-gpu"].value || gpus[0].id,
+        ram: Number(bnForm["bn-ram"].value) || 16,
+        resolution: bnForm["bn-resolution"].value || "1080",
+      },
+      language
+    );
+    renderBottleneck(baselineBn, language);
+  }
   applyGameTheme("default");
 }
 
